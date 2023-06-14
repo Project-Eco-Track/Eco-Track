@@ -24,7 +24,7 @@ const NavBar: React.FC = () => {
         </div>
 
         <div className="nav-right">
-        <IconButton>
+          <IconButton>
             <i
               className="fa-brands fa-github fa-xl"
               style={{ color: "#2e2e2e" }}
