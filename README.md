@@ -1,6 +1,9 @@
 # Eco-Track
 
 Welcome to Eco-Track! This project aims to provide a comprehensive solution for tracking and monitoring environmental data. With Eco-Track, you can easily collect, analyze, and visualize various environmental metrics to contribute towards a greener and more sustainable future.
+### Read [CONTRIBUTING.md](https://github.com/Project-Eco-Track/Eco-Track/CONTRIBUTING.md) before starting to contribute.
+
+<br>
 
 ## Getting Started
 
