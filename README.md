@@ -1,35 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Eco-Track
+
+Welcome to Eco-Track! This project aims to provide a comprehensive solution for tracking and monitoring environmental data. With Eco-Track, you can easily collect, analyze, and visualize various environmental metrics to contribute towards a greener and more sustainable future.
 
 ## Getting Started
 
-First, run the development server:
+To get started with Eco-Track, follow these steps:
 
-```bash
+### 1. Clone the repository:
+
+```shell
+git clone https://github.com/Project-Eco-Track/Eco-Track.git
+```
+
+### 2. Navigate to the project directory:
+
+```shell
+cd Eco-Track
+```
+
+### 3. Install the required dependencies:
+
+```shell
+npm install
+```
+
+### 4. Run the development server:
+
+```shell
 npm run dev
-# or
+```
+
+### 5. Open your web browser and visit http://localhost:3000 to see the Eco-Track application in action!
+
+<br>
+
+## If you are not using npm
+
+### Install dependencies
+
+```shell
+yarn install
+```
+
+or
+
+```shell
+pnpm install
+```
+
+### Start development server
+
+```shell
 yarn dev
-# or
+```
+
+or
+
+```shell
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> App
+>
+> > globals.scss - Global styles <br>
+> > layout.tsx <br>
+> > page.tsx <br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### components folder
 
-## Learn More
+> components
+>
+> > Button - Button Component <br>
+> > NavBar - Navigation Bar Component <br>
 
-To learn more about Next.js, take a look at the following resources:
+### utilities folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> utils
+> >
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Eco-Track
