@@ -1,0 +1,43 @@
+@import "@colors.scss";
+
+.button {
+  width: fit-content;
+  border: solid 2px $primary-white;
+  color: $primary-white;
+  border-radius: 30px;
+  padding: 9px 30px;
+  margin-right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  opacity: 60%;
+  outline: none;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    background-color: $primary-white;
+    color: $primary-black;
+  }
+}
+
+.icon-button {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $primary-white;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
