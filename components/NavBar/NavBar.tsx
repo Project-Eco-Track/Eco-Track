@@ -23,6 +23,8 @@ const NavBar: React.FC = () => {
           </div>
         </div>
 
+        <div className="nav-menu">Menu</div>
+        
         <div className="nav-right">
           <IconButton>
             <i
