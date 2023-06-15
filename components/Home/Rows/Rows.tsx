@@ -49,6 +49,7 @@ const Rows: React.FC = () => {
             width={800}
             height={600}
           />
+
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
             <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
               Badges
@@ -63,6 +64,7 @@ const Rows: React.FC = () => {
             width={800}
             height={600}
           />
+          
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
             <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
               Blog Zone
