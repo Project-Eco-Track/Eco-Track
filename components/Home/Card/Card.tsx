@@ -15,8 +15,8 @@ const Card: React.FC = () => {
             </div>
           </div>
           <div className="flex p-5 flex-col border-gray-500 justify-center border-b h-full gap-1">
-            <div className="flex text-7xl sm:text-8xl justify-start items-center tracking-tight font-[600]">
-              EcoTrack
+            <div className="flex text-7xl sm:text-8xl justify-start items-center tracking-tight font-[600] underline-anim">
+            <span className="underline-anim">EcoTrack</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2">
