@@ -22,8 +22,8 @@ const Rows: React.FC = () => {
           </div>
 
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
-            <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
-              My Carbon Footprint
+            <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
+              Carbon Track
             </div>
           </span>
         </div>
@@ -36,7 +36,7 @@ const Rows: React.FC = () => {
             height={600}
           />
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
-            <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
+            <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
               AI Analysis
             </div>
           </span>
@@ -51,7 +51,7 @@ const Rows: React.FC = () => {
           />
 
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
-            <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
+            <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
               Badges
             </div>
           </span>
@@ -64,9 +64,9 @@ const Rows: React.FC = () => {
             width={800}
             height={600}
           />
-          
+
           <span className="image-text hover:backdrop-blur-sm transition duration-500">
-            <div className="backdrop-blur-sm text-3xl font-[450] tracking-tight p-5 rounded-xl">
+            <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
               Blog Zone
             </div>
           </span>
