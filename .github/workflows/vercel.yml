@@ -1,28 +1,19 @@
-name: Vercel Deployment
-
+name: deploy nexturl to vercel
 on:
   push:
     branches:
-      - main # Change this to the branch you want to trigger deployments from
+      - main
 
 jobs:
-  build-and-deploy:
+  vercel:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Deploy site to Vercel
+        uses: amondnet/vercel-action@v20
         with:
-          node-version: 16 # Update to Node.js 16
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Next.js project
-        run: npm run build
-
-      - name: Deploy to Vercel
-        run: npx vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          vercel-args: '--prod' # Optional
