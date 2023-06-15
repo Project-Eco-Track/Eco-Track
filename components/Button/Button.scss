@@ -1,6 +1,6 @@
-@import "@colors.scss";
+@import "@global-vars.scss";
 
-.button {
+@mixin button {
   width: fit-content;
   border: solid 2px $primary-white;
   color: $primary-white;
@@ -23,6 +23,10 @@
     background-color: $primary-white;
     color: $primary-black;
   }
+}
+
+.button{
+  @include button;
 }
 
 .icon-button {
