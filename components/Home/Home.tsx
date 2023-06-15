@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import Card from "@components/Home/Card";
+import Rows from "./Rows";
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Home: React.FC = () => {
         <Card />
       </div>
       <div className="right">
-        <Card />
+        <Rows/>
       </div>
     </div>
   );
