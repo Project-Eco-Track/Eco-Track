@@ -15,7 +15,7 @@ const Card: React.FC = () => {
             </div>
           </div>
           <div className="flex p-5 flex-col border-gray-500 justify-center border-b h-full gap-1">
-            <div className="flex text-8xl justify-start items-center tracking-tight font-[500]">
+            <div className="flex text-6xl sm:text-8xl justify-start items-center tracking-tight font-[500]">
               EcoTrack
             </div>
             <div className="px-1.5 text-sm">By: Arihan, Akshay</div>
