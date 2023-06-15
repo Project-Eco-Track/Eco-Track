@@ -30,8 +30,10 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <NavBar />
-        {children}
+        <div className="max-w-[1440px] flex flex-col m-auto">
+          <NavBar />
+          {children}
+        </div>
       </body>
     </html>
   );
