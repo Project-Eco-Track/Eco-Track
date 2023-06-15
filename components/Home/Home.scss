@@ -1,0 +1,28 @@
+.home {
+  display: flex;
+  height: 100vh;
+  margin: 0px 40px;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  padding: 10px 5px;
+}
+
+.right {
+  flex: 1;
+  padding: 10px 5px;
+}
+
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    height: 50vh;
+  }
+}
