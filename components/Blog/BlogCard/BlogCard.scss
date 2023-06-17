@@ -12,7 +12,22 @@
   @media screen and (max-width: 768px) {
     flex: 1 0 90%;
     margin: 20px;
-    height:500px;
+    height: 500px;
+  }
+
+  &:hover {
+    img {
+      scale: 0.99;
+    }
+    .content {
+      height: 60%;
+      padding-top: 0;
+      .blog-info {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
   &::before {
     content: "";
@@ -32,8 +47,10 @@
   img {
     width: 100%;
     height: 100%;
+    scale: 1.02;
     object-fit: cover;
     object-position: center;
+    transition: 300ms ease-in-out;
   }
 
   .content {
@@ -50,6 +67,7 @@
     color: white;
     backdrop-filter: blur(20px);
     overflow: hidden;
+    transition: 500ms ease-in-out;
 
     h1,
     p {
@@ -64,7 +82,8 @@
     p {
       font-size: 16px;
       padding: 10px 5px;
-      overflow: hidden;
     }
+
+    
   }
 }
