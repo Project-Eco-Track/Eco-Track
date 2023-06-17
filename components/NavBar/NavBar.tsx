@@ -8,7 +8,10 @@ const NavBar: React.FC = () => {
     <nav>
       <div className="nav-container">
         <div className="nav-left">
-          <div className="nav-icon">
+          <div
+            className="nav-icon"
+            onClick={() => (window.location.href = "/")}
+          >
             <i
               className="fa-solid fa-earth-oceania fa-xl"
               style={{ color: "#2e2e2e" }}
@@ -16,30 +19,30 @@ const NavBar: React.FC = () => {
           </div>
 
           <div className="nav-links">
-            <Button>Our&nbsp;Crew</Button>
-            <Button>Services</Button>
-            <Button>Get&nbsp;Badge</Button>
-            <Button>Blog</Button>
+            <Button open="#">Our&nbsp;Crew</Button>
+            <Button open="#">Services</Button>
+            <Button open="#">Get&nbsp;Badge</Button>
+            <Button open="/blogs">Blog</Button>
           </div>
         </div>
 
         <div className="nav-menu">Menu</div>
-        
+
         <div className="nav-right">
-          <IconButton>
+          <IconButton open="https://github.com/Project-Eco-Track">
             <i
               className="fa-brands fa-github fa-xl"
               style={{ color: "#2e2e2e" }}
             />
           </IconButton>
 
-          <IconButton>
+          <IconButton open="/">
             <i
               className="fa-brands fa-instagram fa-xl"
               style={{ color: "#2e2e2e" }}
             />
           </IconButton>
-          <Button>Login</Button>
+          <Button open="#">Login</Button>
         </div>
       </div>
     </nav>
