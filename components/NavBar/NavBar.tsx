@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
         <div className="nav-menu">Menu</div>
 
         <div className="nav-right">
-          <IconButton open="https://github.com/Project-Eco-Track">
+          <IconButton open="https://github.com/Project-Eco-Track" target="_blank">
             <i
               className="fa-brands fa-github fa-xl"
               style={{ color: "#2e2e2e" }}

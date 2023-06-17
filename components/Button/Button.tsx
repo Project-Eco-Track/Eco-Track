@@ -3,6 +3,7 @@ import "./Button.scss";
 interface ButtonProps {
   children: React.ReactNode;
   open: string;
+  target?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ open, children }) => {
@@ -13,9 +14,9 @@ const Button: React.FC<ButtonProps> = ({ open, children }) => {
   );
 };
 
-const IconButton: React.FC<ButtonProps> = ({ open, children }) => {
+const IconButton: React.FC<ButtonProps> = ({ open, children, target="_self" }) => {
   return (
-    <div onClick={() => window.location.replace(open)} className="icon-button">
+    <div onClick={() => window.open(open, target)} className="icon-button">
       {children}
     </div>
   );
