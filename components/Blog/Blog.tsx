@@ -8,6 +8,8 @@ import Header from "./Header";
 import "./Blog.scss";
 
 interface  BlogData {
+  id: string;
+  author: string;
   src: string;
   title: string;
   description: string;
@@ -33,6 +35,8 @@ const Home: NextPage = () => {
         {data.map((item, index) => (
           <BlogCard
             key={index}
+            id={item.id}
+            author={item.author}
             src={item.src}
             title={item.title}
             description={item.description}
