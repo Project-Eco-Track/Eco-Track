@@ -1,7 +1,7 @@
 import React from "react";
-import "./Slider.scss";
+import "./Header.scss";
 
-const Slider: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div className="slider">
       
@@ -12,4 +12,4 @@ const Slider: React.FC = () => {
   );
 };
 
-export default Slider;
+export default Header;
