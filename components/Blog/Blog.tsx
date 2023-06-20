@@ -19,10 +19,10 @@ const Home: NextPage = () => {
   const [data, setData] = useState<BlogData[]>([]);
 
   useEffect(() => {
-    fetchBlog();
+    fetchBlogs();
   }, []);
 
-  const fetchBlog = async () => {
+  const fetchBlogs = async () => {
     const { data } = await axios.get("/api/blogs");
     setData(data);
     console.log(data);

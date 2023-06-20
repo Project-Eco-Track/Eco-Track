@@ -4,10 +4,7 @@ import "./Header.scss";
 const Header: React.FC = () => {
   return (
     <div className="slider">
-      
-      <div className="content">
-        <h1 className="font-bold">Suppose to be a slider</h1>
-      </div>
+      <img src="https://geographical.co.uk/wp-content/uploads/carbon-dioxide-emissions-title.jpg" />
     </div>
   );
 };
