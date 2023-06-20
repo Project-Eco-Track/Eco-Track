@@ -12,7 +12,7 @@ interface Props {
 }
 
 const BlogCard: React.FC<Props> = ({ id, author, src, title, description }) => {
-  const url: string = `/blogs/@${author}/${title}?id=${id}`;
+  const url: string = `/blogs/@${author}/${title}/${id}`;
   return (
     <Link href={url.replace(/ /g, "-")} className="card">
         <Image

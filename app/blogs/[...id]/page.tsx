@@ -1,7 +1,17 @@
-"use client"
-import { useRouter } from 'next/router'
- 
-export default function Page() {
-  const router = useRouter()
-  return <p>Post: {router.query.slug}</p>
+
+type Params = {
+  params:{
+    id: string
+    username: string
+    blogname: string
+  }
 }
+const page = ({params: {id, username, blogname}}:Params) => {
+  return (
+    <div className="text-white">
+      {id} {username} {blogname}
+    </div>
+  )
+}
+
+export default page
