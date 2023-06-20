@@ -71,8 +71,8 @@ pnpm dev
 
 <br>
 
-- [x] Blogs: Lists of blogs
-- [ ] Blog: Archives
+- [x] Blogs: Home
+- [ ] Blog: Posts
 - [ ] Blog: Edit Page
 
 <br>
