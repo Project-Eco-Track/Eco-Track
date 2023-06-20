@@ -1,48 +1,37 @@
-"use client";
 import { NextPage } from "next";
-import { useEffect, useState } from "react";
 import axios from "axios";
+import type { Metadata } from "next";
 
 import BlogCard from "@components/Blog/BlogCard";
+import getBlogs from "@libs/getBlogs";
 import Header from "./Header";
 import "./Blog.scss";
 
-interface  BlogData {
-  id: string;
-  author: string;
-  src: string;
-  title: string;
-  description: string;
-}
+export const metadata: Metadata = {
+  title: "EcoTrack: Blog",
+};
 
-const Home: NextPage = () => {
-  const [data, setData] = useState<BlogData[]>([]);
+const Home: NextPage = async () => {
+  const blogData: Promise<Blogs[]> = getBlogs();
+  const blogs = await blogData;
 
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
-
-  const fetchBlogs = async () => {
-    const { data } = await axios.get("/api/blogs");
-    setData(data);
-    console.log(data);
-  };
+  const content = blogs.map((blog) => {
+    return (
+      <BlogCard
+        key={blog.id}
+        id={blog.id}
+        author={blog.author}
+        src={blog.src}
+        title={blog.title}
+        description={blog.description}
+      />
+    );
+  });
 
   return (
     <div className="blog-container">
       <Header />
-      <div className="blog-wrapper">
-        {data.map((item, index) => (
-          <BlogCard
-            key={index}
-            id={item.id}
-            author={item.author}
-            src={item.src}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </div>
+      <div className="blog-wrapper">{content}</div>
     </div>
   );
 };
