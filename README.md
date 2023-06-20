@@ -1,7 +1,7 @@
 # Eco-Track
 
 Welcome to Eco-Track! This project aims to provide a comprehensive solution for tracking and monitoring environmental data. With Eco-Track, you can easily collect, analyze, and visualize various environmental metrics to contribute towards a greener and more sustainable future.
-### ### Read [CONTRIBUTING.md](https://github.com/Project-Eco-Track/Eco-Track/blob/main/CONTRIBUTING.md) before starting to contribute.
+### Read [CONTRIBUTING.md](https://github.com/Project-Eco-Track/Eco-Track/blob/main/CONTRIBUTING.md) before starting to contribute.
 
 
 <br>
@@ -64,24 +64,22 @@ or
 pnpm dev
 ```
 
-## Project structure
+### Pages and components
+- [x] Desktop Navigation Bar
+- [ ] Mobile Navigation Bar
+- [x] Home Page
 
-> App
->
-> > globals.scss - Global styles <br>
-> > layout.tsx <br>
-> > page.tsx <br>
+<br>
 
-### components folder
+- [x] Blogs: Lists of blogs
+- [ ] Blog: Archives
+- [ ] Blog: Edit Page
 
-> components
->
-> > Button - Button Component <br>
-> > NavBar - Navigation Bar Component <br>
+<br>
 
-### utilities folder
-
-> utils
-> >
-
+- [ ] Badge Page
+- [ ] About Team Page
+- [ ] Carbon Footprint Page
+- [ ] Login Page
+- [ ] User Profile page
 
