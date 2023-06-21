@@ -41,7 +41,14 @@ const TeamCard: React.FC<Props> = ({
 
           <h3 className="member-name">{name}</h3>
           <p className="member-position">{position}</p>
-          <img className="image" src={illustration}/>
+
+          <Image 
+            src={illustration}
+            alt={name}
+            className="illustration-image"
+            width={300}
+            height={300}
+          />
           <p className="member-description">{description}</p>
         </div>
 
