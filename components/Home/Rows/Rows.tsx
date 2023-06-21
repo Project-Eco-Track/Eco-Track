@@ -47,7 +47,7 @@ const Rows: React.FC = () => {
             </span>
           </Link>
         </div>
-        <a href="/badges" className="image-container">
+        <div className="image-container">
           <Image
             className="brightness-[0.7]"
             src={galaxy.src}
@@ -64,7 +64,6 @@ const Rows: React.FC = () => {
             </span>
           </Link>
         </div>
-
         <div className="image-container">
           <Image
             className="brightness-[0.7]"
