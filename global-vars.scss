@@ -3,10 +3,8 @@
 $primary-white: #eeeeee;
 $primary-black: #2e2e2e;
 
-.primary-white {
-  color: $primary-white;
-}
-
-.primary-black {
-  color: $primary-black;
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
