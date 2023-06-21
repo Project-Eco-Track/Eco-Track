@@ -48,7 +48,9 @@ const NavBar: React.FC = () => {
             </Button>
           </SignedOut>
           <SignedIn>
+            <IconButton>
             <UserButton />
+            </IconButton>
           </SignedIn>
         </div>
       </div>
