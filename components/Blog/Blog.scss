@@ -1,0 +1,26 @@
+@import "@global-vars.scss";
+
+.primary-black {
+  background-color: $primary-black;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  .blog-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+    background-color: #2e2e2e61;
+  }
+}
