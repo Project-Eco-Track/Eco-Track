@@ -1,4 +1,5 @@
 import React from "react";
+import "./TopBar.scss";
 import ProgressBar from "./ProgressBar";
 import { HelpCircle, TreePine } from "lucide-react";
 

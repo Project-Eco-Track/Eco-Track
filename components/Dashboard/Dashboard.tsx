@@ -1,4 +1,5 @@
 import React from "react";
+import "./Dashboard.scss";
 import TopBar from "./TopBar";
 
 const Dashboard: React.FC = () => {

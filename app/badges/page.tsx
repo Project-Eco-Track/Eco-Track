@@ -10,3 +10,4 @@ const BadgePage: React.FC = () => {
 };
 
 export default BadgePage;
+

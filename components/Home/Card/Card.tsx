@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import "./Card.scss";
 import { ChevronRight } from "lucide-react";
 const Card: React.FC = () => {
@@ -7,16 +8,16 @@ const Card: React.FC = () => {
       <div className="card">
         <div className="grid grid-rows-[0.25fr,2fr,1.75fr] w-full h-full gap-2">
           <div className="flex p-5">
-            <div className="w-full justify-between flex">
-              Our Team
-              <div>
-                <ChevronRight />
-              </div>
-            </div>
+              <Link href="/about" className="w-full justify-between flex">
+                Our Team
+                <div>
+                  <ChevronRight />
+                </div>
+            </Link>
           </div>
           <div className="flex p-5 flex-col border-gray-500 justify-center border-b h-full gap-1">
             <div className="flex text-7xl sm:text-8xl justify-start items-center tracking-tight font-[600] underline-anim">
-            <span className="underline-anim">EcoTrack</span>
+              <span className="underline-anim">EcoTrack</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2">

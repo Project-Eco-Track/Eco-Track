@@ -1,0 +1,87 @@
+@import "@global-vars.scss";
+@import "components/Home/Card/Card.scss";
+
+.card {
+  width: 45%;
+  height: 400px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    flex: 1 0 90%;
+    margin: 20px;
+    height: 500px;
+  }
+
+  &:hover {
+    .content {
+      height: 60%;
+      padding-top: 0;
+      .blog-info {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.138)
+    );
+    z-index: 9;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 300ms ease-in-out;
+  }
+
+  .content {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: 500ms ease-in-out;
+
+    h1,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      overflow: hidden;
+      padding: 10px 5px;
+    }
+
+    
+  }
+}

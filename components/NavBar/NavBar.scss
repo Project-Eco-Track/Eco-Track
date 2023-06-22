@@ -65,7 +65,7 @@ nav {
     }
 
     .nav-right {
-      width: 250px;
+      width: fit-content;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -73,6 +73,7 @@ nav {
       @media screen and (max-width: 979px) {
         width: 350px;
       }
+      
       @media screen and (max-width: 900px) {
         display: none;
       }
