@@ -19,7 +19,7 @@ const TopBar: React.FC = () => {
           <div className="flex gap-3">
             🌳
             <div className="flex flex-1 items-center">
-              <ProgressBar size={75} />
+              <ProgressBar size={80} />
             </div>
             <div>🌴</div>
           </div>

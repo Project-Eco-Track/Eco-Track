@@ -1,12 +1,13 @@
 import React from "react";
-import Dashboard from "@components/Dashboard";
+import Dashboard from "@components/Dashboard/Dashboard";
 
-const HomePage: React.FC = () => {
+const BadgePage: React.FC = () => {
   return (
     <div>
-      <Dashboard/>
+      <Dashboard />
     </div>
   );
 };
 
-export default HomePage;
+export default BadgePage;
+
