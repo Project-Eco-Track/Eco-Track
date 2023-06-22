@@ -78,8 +78,8 @@ pnpm dev
 <br>
 
 - [ ] Badge Page
-- [ ] About Team Page
+- [x] About Team Page
 - [ ] Carbon Footprint Page
-- [ ] Login Page
-- [ ] User Profile page
+- [x] Login Page
+- [x] User Profile page
 
