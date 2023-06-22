@@ -8,13 +8,13 @@ interface Props {
   id: number;
   name: string;
   image: string;
-  illustration:string;
+  illustration: string;
   position?: string;
   description: string;
   socialMedia: {
     twitter: string;
     linkedin: string;
-    github: string ;
+    github: string;
     instagram: string;
   };
 }
@@ -25,7 +25,7 @@ const TeamCard: React.FC<Props> = ({
   position,
   description,
   socialMedia,
-  illustration
+  illustration,
 }) => {
   return (
     <div className="member-card" key={id}>
@@ -42,7 +42,7 @@ const TeamCard: React.FC<Props> = ({
           <h3 className="member-name">{name}</h3>
           <p className="member-position">{position}</p>
 
-          <Image 
+          <Image
             src={illustration}
             alt={name}
             className="illustration-image"
@@ -53,18 +53,30 @@ const TeamCard: React.FC<Props> = ({
         </div>
 
         <div className="social-media-icons">
+
+        {socialMedia.twitter !== "" && (
           <Link href={socialMedia.twitter} target="_blank">
             <i className="fab fa-twitter"></i>
           </Link>
+          )}
+
+          {socialMedia.linkedin !== "" && (
           <Link href={socialMedia.linkedin} target="_blank">
             <i className="fab fa-linkedin"></i>
           </Link>
+          )}
+
+          {socialMedia.github !== "" && (
           <Link href={socialMedia.github} target="_blank">
             <i className="fab fa-github"></i>
           </Link>
-          <Link href={socialMedia.instagram} target="_blank">
-            <i className="fab fa-instagram"></i>
-          </Link>
+          )}
+
+          {socialMedia.instagram !== "" && (
+            <Link href={socialMedia.instagram} target="_blank">
+              <i className="fab fa-instagram"></i>
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -29,6 +29,7 @@
   .team-description {
     font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .styled-button {
@@ -43,13 +44,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
-
-  @media screen and (max-width: 768px) {
-    .team-members > * {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
   }
 
   .member-card {
@@ -78,6 +72,10 @@
         object-fit: fill;
         object-position: center;
         border-radius: 15px;
+
+        @media screen and (max-width: 800px) {
+          object-fit: contain;
+        }
       }
     }
     &:hover {
@@ -109,6 +107,9 @@
 
   .member-description {
     margin-top: 15px;
+    @media screen and (max-width: 800px) {
+      margin:20px;
+    }
   }
 
   .social-media-icons {
@@ -126,5 +127,20 @@
         color: $primary-white;
       }
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    .team-members > * {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    .member-card {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+      padding: 10px;;
+    }
+    
   }
 }
