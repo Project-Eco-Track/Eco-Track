@@ -44,14 +44,14 @@ const NavBar: React.FC = () => {
             />
           </IconButton>
           <SignedOut>
-            <Button>
+            <Button open="">
               <SignInButton mode="modal" redirectUrl={"/"}>
                 Sign In
               </SignInButton>
             </Button>
           </SignedOut>
           <SignedIn>
-            <IconButton>
+            <IconButton open="">
             <UserButton />
             </IconButton>
           </SignedIn>
