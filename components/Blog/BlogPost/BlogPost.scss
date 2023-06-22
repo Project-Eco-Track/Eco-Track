@@ -1,0 +1,46 @@
+@import "@global-vars.scss";
+@import "@components/Button/Button.scss";
+@import "@components/Home/Card/Card.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  background-image: linear-gradient(#1f1f1f, #232323, #232323, #232323);
+  font-family: 'Roboto', sans-serif;}
+
+.post-container {
+  @include card;
+  min-height: 100%;
+  margin: 10px 0px 20px 0px;
+  background-image: linear-gradient($primary-black, #232323, #232323);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  .post-header {
+    display: flex;
+    margin-top: 150px;
+    min-height: 500px;
+    width: 70vw;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 30px auto;
+      object-position: center;
+      object-fit: contain;
+    }
+  }
+
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 70vw;
+    margin: 0 auto;
+  }
+}

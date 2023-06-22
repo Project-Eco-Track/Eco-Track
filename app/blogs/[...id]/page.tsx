@@ -1,15 +1,14 @@
+import BlogPost from "@components/Blog/BlogPost"
 
 type Params = {
   params:{
     id: string
-    username: string
-    blogname: string
   }
 }
-const page = ({params: {id, username, blogname}}:Params) => {
+const page = ({params: {id}}:Params) => {
   return (
     <div className="text-white">
-      {id} {username} {blogname}
+      <BlogPost id={id}/>
     </div>
   )
 }
