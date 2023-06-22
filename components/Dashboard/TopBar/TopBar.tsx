@@ -1,6 +1,6 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
-import { HelpCircle, TreePine } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 
 const TopBar: React.FC = () => {
   return (
