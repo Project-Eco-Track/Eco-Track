@@ -47,7 +47,7 @@ const Rows: React.FC = () => {
             </span>
           </Link>
         </div>
-        <a  href="badges" className="image-container">
+        <div className="image-container">
           <Image
             className="brightness-[0.7]"
             src={galaxy.src}
@@ -55,7 +55,7 @@ const Rows: React.FC = () => {
             width={800}
             height={600}
           />
-          
+
           <Link href="#">
             <span className="image-text hover:backdrop-blur-sm transition duration-500 cursor-pointer">
               <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
