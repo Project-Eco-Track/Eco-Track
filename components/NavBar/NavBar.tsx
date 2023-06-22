@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
 import Button, { IconButton } from "@components/Button";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import "./NavBar.scss";
+import { UserPlus } from "lucide-react";
 
 const NavBar: React.FC = () => {
   return (
@@ -42,7 +43,18 @@ const NavBar: React.FC = () => {
               style={{ color: "#2e2e2e" }}
             />
           </IconButton>
-          <Button open="#">Login</Button>
+          <SignedOut>
+            <Button>
+              <SignInButton mode="modal" redirectUrl={"/"}>
+                Sign In
+              </SignInButton>
+            </Button>
+          </SignedOut>
+          <SignedIn>
+            <IconButton>
+            <UserButton />
+            </IconButton>
+          </SignedIn>
         </div>
       </div>
     </nav>

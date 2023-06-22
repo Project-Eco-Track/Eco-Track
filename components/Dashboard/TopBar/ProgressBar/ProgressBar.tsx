@@ -7,7 +7,7 @@ interface ProgressBarProps {
 const ProgressBar: React.FC<ProgressBarProps> = ({ size }) => {
   return (
     <>
-      <div className="w-full">
+      <div className="flex-1">
         <span id="ProgressLabel" className="sr-only">
           Loading
         </span>
@@ -18,7 +18,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ size }) => {
           className="block rounded-full bg-gray-200 dark:bg-gray-700"
         >
           <span
-            className={`block h-4 rounded-full bg-green-600 text-center text-[10px]/4 w-[${size}%]`}
+            className={`block h-4 rounded-full bg-green-600 text-center text-[10px]/4`} style={{ width: `${size}%` }}
           >
             <span className="rounded-sm bg-white px-0.5 font-bold text-black">
              {size}%
