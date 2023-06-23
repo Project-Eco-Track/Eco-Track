@@ -1,0 +1,115 @@
+$secondary-color: #4a4a4a;
+$heading-color: #e0e0e0;
+$link-color: #5585b5;
+
+.md-styles {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading-color;
+    font-weight: 600;
+    line-height: 55px;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Specific styles for Markdown elements
+
+  h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  h5 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  blockquote {
+    border-left: 4px solid $secondary-color;
+    margin: 0;
+    padding-left: 16px;
+    font-style: italic;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 16px;
+    margin-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  code {
+    font-family: monospace;
+    background-color: #2b2b2b;
+    border-radius: 30px;
+    padding: 2px 4px;
+  }
+
+  pre {
+    font-family: monospace;
+    background-color: #2b2b2b;
+    padding: 16px;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $secondary-color;
+      padding: 8px;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: $secondary-color;
+      color: #fff;
+    }
+  }
+}

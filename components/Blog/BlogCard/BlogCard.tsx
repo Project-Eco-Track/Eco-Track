@@ -12,7 +12,7 @@ interface Props {
 }
 
 const BlogCard: React.FC<Props> = ({ id, author, src, title, description }) => {
-  const url: string = `/blogs/@${author}/${title}/${id}`;
+  const url: string = `/blogs/${id}`;
   return (
     <Link href={url.replace(/ /g, "-")} className="card">
       <Suspense fallback={<div>Loading...</div>}>
