@@ -115,6 +115,22 @@
         }
     </code>
     </pre>
+    <br/>
+    <a href="/">Home</a>
 `;
 
-export const getBlogPost = () => data;
+
+export const getBlogPost = (id:string) => {
+    const blogPosts: BlogPost = {
+
+        id: id,
+        title: 'How to Reduce Your Carbon Footprint',
+        author: 'John Doe',
+        date: '2021-01-01',
+        image: 'https://images.pexels.com/photos/929382/pexels-photo-929382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        content: data,
+
+    }
+    JSON.stringify(blogPosts);
+    return blogPosts;
+};
