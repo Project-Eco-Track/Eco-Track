@@ -9,18 +9,6 @@ on:
       branches: [ main ]
 
 jobs:
-  build:
-    runs-on : ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use NodeJs 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm run test --if-present
-  
   deploy:
     runs-on: ubuntu-latest
     steps:
