@@ -3,15 +3,10 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  workflow_dispatch:
-  release:
-    types: [published]
   push:
-    # this will deploy data files only when no release is created
-    branches:
-      - main
-    paths:
-      - "data/**"
+    branches: [ main ]
+  pull_request:
+      branches: [ main ]
 
 jobs:
   build:
@@ -27,7 +22,6 @@ jobs:
       - run: npm run test --if-present
   
   deploy:
-    if: github.repository == 'Project-Eco-Track/Eco-Track'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
