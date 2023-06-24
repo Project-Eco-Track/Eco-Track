@@ -1,5 +1,7 @@
 # Eco-Track
 
+<img src = "https://github.com/Project-Eco-Track/Eco-Track/actions/workflows/node.js.yml/badge.svg">
+
 Welcome to Eco-Track! This project aims to provide a comprehensive solution for tracking and monitoring environmental data. With Eco-Track, you can easily collect, analyze, and visualize various environmental metrics to contribute towards a greener and more sustainable future.
 ### Read [CONTRIBUTING.md](https://github.com/Project-Eco-Track/Eco-Track/blob/main/CONTRIBUTING.md) before starting to contribute.
 
