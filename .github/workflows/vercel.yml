@@ -1,19 +1,31 @@
-name: Deploy CI
+name: Deploy to Vercel
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
+  workflow_dispatch:
+  release:
+    types: [published]
   push:
-    branches: [master]
-  pull_request:
-    types: [opened, synchronize, reopened]
+    # this will deploy data files only when no release is created
+    branches:
+      - main
+    paths:
+      - "data/**"
+
 jobs:
   deploy:
+    if: github.repository == 'Project-Eco-Track/Eco-Track'
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Deploy to Vercel Action
-        uses: BetaHuhn/deploy-to-vercel-action@v1
-        with:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      - uses: actions/checkout@v3
+      - name: install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: pull Vercel environment information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: build project artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: deploy project artifacts to Vercel
+        run: |
+          du --inodes -d 5 .vercel/output
+          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
