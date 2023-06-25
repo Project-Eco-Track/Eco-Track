@@ -18,12 +18,12 @@ const Home: NextPage = async () => {
   const content = blogs.map((blog) => {
     return (
       <BlogCard
-        key={blog.id}
-        id={blog.id}
-        author={blog.author}
-        src={blog.src}
-        title={blog.title}
-        description={blog.description}
+        key={blog.BlogID}
+        id={blog.BlogID}
+        author={blog.Author}
+        src={blog.Image_url}
+        title={blog.Title}
+        description={blog.Description}
       />
     );
   });

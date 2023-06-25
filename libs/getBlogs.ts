@@ -1,6 +1,6 @@
 const getBlogs = async () => {
   const res = await fetch(
-    "https://raw.githubusercontent.com/Akshay-Vs/resources/main/Json/blogs",
+    process.env.GET_ALL_BLOGS || "http://localhost:3001/blogs",
     {
       next: {
         revalidate: 60,
@@ -10,6 +10,7 @@ const getBlogs = async () => {
   if (!res.ok) {
     return { blogs: null, error: "Something went wrong" };
   }
+  console.log(res);
   return res.json();
 };
 
