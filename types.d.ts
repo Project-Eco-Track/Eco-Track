@@ -1,20 +1,24 @@
 type Blogs = {
-  id: string;
-  author: string;
-  src: string;
-  title: string;
-  description: string;
-  //   date: string;
-  //   category: string;
-  //   views: number;
+  BlogID: string;
+  Author: string;
+  Image_url: string;
+  Title: string;
+  Description: string;
+  //   Date: string;
+  //   Category: string;
+  //   Likes: number;
   //   tags: string[];
 };
 
 type BlogPost = {
-  id: string;
-  title: string;
-  author: string;
-  date: string;
-  image?: string;
-  content: string;
+  BlogID: string;
+  Author: string;
+  Image_url: string;
+  Title: string;
+  Description: string;
+  Content: string;
+  Date: string;
+  //   Category: string;
+  //   Likes: number;
+  //   tags: string[];
 };
