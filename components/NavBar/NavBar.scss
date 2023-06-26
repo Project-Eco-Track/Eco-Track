@@ -39,18 +39,112 @@ nav {
 
     .nav-menu {
       @include button;
-      width: 100%;
+      width: 90%;
       margin: 10px;
+      margin-left: 9%;
+      top: 0;
       display: none;
+      transition: 300ms ease-in-out;
 
       @media screen and (max-width: 979px) {
         display: flex;
+        margin-left: 12%;
+      }
+      @media screen and (max-width: 640px) {
+        margin-left: 16%;
+      }
+
+      .nav-menu-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        top: 0;
+        transform: translateY(100px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .nav-menu-links {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .nav-menu-link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $primary-white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .open {
+      animation: openAnim 1s ease-in-out forwards;
+      backdrop-filter: blur(15px);
+    }
+    @keyframes openAnim {
+      0% {
+        width: 90%;
+        margin: 10px;
+        margin-left: 9%;
+        height: 45px;
+      }
+      50% {
+        margin-left: 10px;
+        width: 100%;
+        height: 45px;
+        transform: translateY(0px);
+      }
+      100% {
+        margin-left: 10px;
+        width: 100%;
+        transform: translateY(200px);
+        background: #000;
+        border: #000;
+        height: 450px;
+        opacity: .9;
+      }
+    }
+
+    .nav-menu-content {
+      animation: showContent 1s ease-in-out forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @keyframes showContent {
+      0% {
+        opacity: 0;
+        scale:0;
+      }
+      50% {
+        opacity: 0;
+        scale:0;
+      }
+      100% {
+        opacity: 1;
+        scale:1;
       }
     }
 
     .nav-left {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 979px) {
+        position: absolute;
+      }
 
       .nav-links {
         width: 10px;
@@ -73,7 +167,7 @@ nav {
       @media screen and (max-width: 979px) {
         width: 350px;
       }
-      
+
       @media screen and (max-width: 900px) {
         display: none;
       }
