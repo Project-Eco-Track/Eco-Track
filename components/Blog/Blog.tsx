@@ -24,6 +24,8 @@ const Home: NextPage = async () => {
         src={blog.Image_url}
         title={blog.Title}
         description={blog.Description}
+        date={blog.Date}
+        likes={blog.Likes}
       />
     );
   });
