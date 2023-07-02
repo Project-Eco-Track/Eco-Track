@@ -1,5 +1,5 @@
 $secondary-color: #4a4a4a;
-$heading-color: #e0e0e0;
+$heading-color: #cacaca;
 $link-color: #5585b5;
 
 .md-styles {
@@ -10,7 +10,7 @@ $link-color: #5585b5;
   h5,
   h6 {
     color: $heading-color;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 55px;
   }
 
@@ -27,11 +27,13 @@ $link-color: #5585b5;
 
   h1 {
     font-size: 34px;
+    font-weight: 400;
     margin-bottom: 20px;
   }
 
   h2 {
     font-size: 30px;
+    font-weight: 400;
     margin-bottom: 16px;
   }
 

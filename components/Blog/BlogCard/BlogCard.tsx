@@ -9,9 +9,19 @@ interface Props {
   src: string;
   title: string;
   description: string;
+  date: string;
+  likes: number;
 }
 
-const BlogCard: React.FC<Props> = ({ id, author, src, title, description }) => {
+const BlogCard: React.FC<Props> = ({
+  id,
+  author,
+  src,
+  title,
+  description,
+  date,
+  likes,
+}) => {
   const url: string = `/blogs/${id}`;
   return (
     <Link href={url.replace(/ /g, "-")} className="card">
@@ -25,7 +35,26 @@ const BlogCard: React.FC<Props> = ({ id, author, src, title, description }) => {
         />
         <div className="content">
           <h1>{title}</h1>
-          <p>{description}</p>
+          <div className="overflow-hidden">
+            <p>{description}</p>
+            <div className="flex justify-evenly font-bold mt-4">
+              <p>
+                <i className="fa-solid fa-at mx-2"></i>
+                {author}
+              </p>
+              <p>
+                <i className="fa-brands fa-readme mx-2"></i>2 min
+              </p>
+              <p>
+                <i className="fa-solid fa-calendar-days mx-2"></i>
+                {date}
+              </p>
+              <p>
+                <i className="fa-solid fa-heart mx-2"></i>
+                {likes}
+              </p>
+            </div>
+          </div>
         </div>
       </Suspense>
     </Link>
