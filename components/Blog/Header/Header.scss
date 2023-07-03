@@ -1,36 +1,11 @@
 .slider {
   width: 100%;
-  height: 500px;
+  height: 450px;
   margin: 10px;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   background-color: #3b3b3b;
 
   @media screen and (max-width: 768px) {
-    height: 300px;
-  }
-
-  .content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    color: white;
-    overflow: hidden;
-
-    
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: 300ms ease-in-out;
-    border-radius: 30px;
+    display: none;
   }
 }
