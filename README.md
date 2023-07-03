@@ -68,13 +68,13 @@ pnpm dev
 
 ### Pages and components
 - [x] Desktop Navigation Bar
-- [ ] Mobile Navigation Bar
+- [x] Mobile Navigation Bar
 - [x] Home Page
 
 <br>
 
 - [x] Blogs: Home
-- [ ] Blog: Posts
+- [x] Blog: Posts
 - [ ] Blog: Edit Page
 
 <br>
