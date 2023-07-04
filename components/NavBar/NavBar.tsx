@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
           </motion.div>
           <div className="nav-links">
             <Button open="/about">Our&nbsp;Team</Button>
-            <Button open="#">Track</Button>
+            <Button open="/track">Track</Button>
             <Button open="/badges">Get&nbsp;Badge</Button>
             <Button open="/blogs">Blog</Button>
           </div>
