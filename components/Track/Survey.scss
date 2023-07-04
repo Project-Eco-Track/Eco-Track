@@ -1,0 +1,28 @@
+@import "~survey-core/defaultV2.min.css";
+@import "@global-vars.scss";
+@import "@components/Button/Button.scss";
+
+.sd-container-modern {
+  background-color: $primary-black;
+  color: $primary-white;
+}
+.sd-root-modern .sd-container-modern__title {
+  background-color: $primary-black;
+  color: $primary-white;
+}
+.sd-element--with-frame {
+  background-color: #444141;
+}
+
+.sd-description,
+.sv-string-viewer {
+  color: $primary-white;
+}
+.sd-btn {
+  @include button;
+  background-color: transparent
+}
+
+.sd-root-modern {
+    background-color: transparent;
+}
