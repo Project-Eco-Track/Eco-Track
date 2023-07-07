@@ -33,10 +33,16 @@ const BlogPost = async (props: Props) => {
           Date={Date}
         />
       </div>
-
       <div className="post-container font-sans font-bold text-lg ">
-        <div className="mt-20 text-start self-center mx-20">
-          {Title} by {Author}
+        <div className="mt-20 text-start self-center mx-20 flex justify-center w-screen">
+          <div className="self-baseline">
+            <Link href="/blogs" className="cursor-pointer underline">
+            <i className="fa-solid fa-arrow-left underline"></i> Blogs
+            </Link>
+          </div>
+          <div className="mx-72 text-center">
+            {Title} by {Author}
+          </div>
         </div>
         <article className="blog-content md-styles">
           <section
