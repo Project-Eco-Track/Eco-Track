@@ -22,7 +22,7 @@ const Rows: React.FC = () => {
             />
           </div>
 
-          <Link href="#">
+          <Link href="/track">
             <span className="image-text hover:backdrop-blur-sm transition duration-500 cursor-pointer">
               <div className="backdrop-blur-sm text-4xl font-[600] tracking-tight p-5 rounded-xl">
                 Carbon Track
