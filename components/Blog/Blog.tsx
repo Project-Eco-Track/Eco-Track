@@ -1,3 +1,4 @@
+'use client'
 import { NextPage } from "next";
 import axios from "axios";
 import type { Metadata } from "next";
