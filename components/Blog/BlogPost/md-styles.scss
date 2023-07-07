@@ -12,6 +12,8 @@ $link-color: #5585b5;
     color: $heading-color;
     font-weight: 200;
     line-height: 55px;
+    margin-top: 30px;
+
   }
 
   a {
@@ -26,39 +28,42 @@ $link-color: #5585b5;
   // Specific styles for Markdown elements
 
   h1 {
-    font-size: 34px;
-    font-weight: 400;
+    font-size: 36px;
+    font-weight: 600;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 32px;
+    font-weight: 600;
     margin-bottom: 16px;
   }
 
   h3 {
-    font-size: 26px;
+    font-weight: 500;
+    font-size: 28px;
     margin-bottom: 12px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 8px;
   }
 
   h5 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 4px;
   }
 
   h6 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 2px;
   }
 
   p {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    font-weight: 100;
   }
 
   blockquote {
@@ -96,6 +101,8 @@ $link-color: #5585b5;
   img {
     max-width: 100%;
     margin-bottom: 16px;
+    background-position: center;
+    background-size: cover;
   }
 
   table {
@@ -113,5 +120,12 @@ $link-color: #5585b5;
       background-color: $secondary-color;
       color: #fff;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    scale:.9;
+    margin-top: 0;
+    padding: 0;
+    transform: translateY(-5%);
   }
 }

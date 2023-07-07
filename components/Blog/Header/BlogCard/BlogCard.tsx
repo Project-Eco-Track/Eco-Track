@@ -1,26 +1,20 @@
 import React from "react";
-import getBlogPost from "@libs/getBlogPost";
-import "./FeaturedBlogs.scss";
-interface Props {
-  Img_url: string;
-}
+import "./BlogCard.scss";
 
-const FeaturedBlogs = async ({ Img_url }: Props) => {
-  const data: Promise<BlogPost> = getBlogPost("1");
-  const {
-    BlogID,
-    Author,
-    Image_url,
-    Title,
-    Description,
-    Content,
-    Likes,
-    Date,
-  } = await data;
+
+const BlogCard = async ({
+  BlogID,
+  Author,
+  Image_url,
+  Title,
+  Description,
+  Likes,
+  Date,
+}: Blogs) => {
   return (
     <div className="featured-card cursor-pointer">
       <div className="container">
-        <img src={Img_url}></img>
+        <img src={Image_url}></img>
         <div className="blog-details">
           <h1>{Title}</h1>
           <div className="text px-5">{Description}</div>
@@ -47,4 +41,4 @@ const FeaturedBlogs = async ({ Img_url }: Props) => {
   );
 };
 
-export default FeaturedBlogs;
+export default BlogCard;
