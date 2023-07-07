@@ -1,6 +1,6 @@
 const getBlogs = async () => {
   const res = await fetch(
-    process.env.GET_ALL_BLOGS || "http://localhost:3001/blogs",
+    process.env.GET_ALL_BLOGS || "http://localhost:3001",
     {
       next: {
         revalidate: 60,

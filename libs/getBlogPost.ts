@@ -1,5 +1,5 @@
 const getBlogPost = async (id: string): Promise<BlogPost> => {
-  const url = process.env.GET_ALL_BLOGS || "http://localhost:3001/blog";
+  const url = process.env.GET_BLOG_POSTS || "http://localhost:3001";
   const res:Response = await fetch(`${url}/${id}`, {
     next: {
       revalidate: 60,
