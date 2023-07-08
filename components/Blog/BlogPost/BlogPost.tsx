@@ -2,7 +2,7 @@ import getBlogPost from "@libs/getBlogPost";
 import Link from "next/link";
 import "./BlogPost.scss";
 import "./md-styles.scss";
-import BlogCard from "../Header/BlogCard";
+import BlogCardXL from "../BlogCard-xl";
 
 interface Props {
   id: string;
@@ -23,7 +23,7 @@ const BlogPost = async (props: Props) => {
   return (
     <>
       <div className="card-container">
-        <BlogCard
+        <BlogCardXL
           BlogID={BlogID}
           Author={Author}
           Image_url={Image_url}
@@ -49,6 +49,7 @@ const BlogPost = async (props: Props) => {
             dangerouslySetInnerHTML={{ __html: `<div>${Content}</div>` }}
           />
         </article>
+        
       </div>
     </>
   );

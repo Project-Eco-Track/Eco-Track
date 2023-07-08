@@ -2,7 +2,7 @@ import React from "react";
 import "./BlogCard.scss";
 
 
-const BlogCard = async ({
+const BlogCardXL = async ({
   BlogID,
   Author,
   Image_url,
@@ -41,4 +41,4 @@ const BlogCard = async ({
   );
 };
 
-export default BlogCard;
+export default BlogCardXL;
