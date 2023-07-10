@@ -1,3 +1,5 @@
+@import "@components/Button/Button.scss";
+
 .editor-container {
   width: 100%;
   height: 100%;
@@ -5,4 +7,8 @@
   border-radius: 30px;
   margin-top: 10px;
   background-color: #2e2e2e61;
+
+  .button{
+    @include button;
+  }
 }
