@@ -1,3 +1,4 @@
+// Type: Library
 const getBlogs = async () => {
   const url = process.env.GET_ALL_BLOGS_URL;
   const res = await fetch(`${url}`, {

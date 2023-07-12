@@ -1,3 +1,4 @@
+// Type: Library
 const getBlogPost = async (id: string): Promise<BlogPost> => {
   const url = process.env.GET_BLOG_POST_URL;
   const res:Response = await fetch(`${url}/${id}`, {
