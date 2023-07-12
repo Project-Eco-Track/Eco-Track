@@ -23,6 +23,7 @@
       "@*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Blog/BlogEdit/BlogEdit.tsx"],
+
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Track/Survey/json.ts", "components/Blog/BlogEdit/BlogEdit.tsx"],
   "exclude": ["node_modules"]
 }

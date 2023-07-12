@@ -76,6 +76,7 @@ pnpm dev
 - [x] Blogs: Home
 - [x] Blog: Posts
 - [ ] Blog: Edit Page
+- [ ] Blog: Preview Page
 
 <br>
 
