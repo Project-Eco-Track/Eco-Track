@@ -22,7 +22,7 @@ const BlogCard: React.FC<Props> = ({
   date,
   likes,
 }) => {
-  const url: string = `/blogs/${id}`;
+  const url: string = `/blogs/posts/${id}`;
   return (
     <Link href={url.replace(/ /g, "-")} className="card">
       <Suspense fallback={<div>Loading...</div>}>
