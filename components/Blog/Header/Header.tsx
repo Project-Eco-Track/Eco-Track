@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import BlogCard from "../BlogCard-xl";
+import BlogCard from "./BlogCard";
 import Link from "next/link";
 import getFeaturedBlog from "@libs/getFeaturedBlog";
 
