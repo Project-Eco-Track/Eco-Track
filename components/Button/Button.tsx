@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.scss";
+import Link from "next/link";
 interface ButtonProps {
   children: React.ReactNode;
   open: string;
@@ -8,13 +9,17 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ open, children }) => {
   return (
-    <div onClick={() => (window.location.href = open)} className="button">
+    <Link href={open} className="button">
       {children}
-    </div>
+    </Link>
   );
 };
 
-const IconButton: React.FC<ButtonProps> = ({ open, children, target="_self" }) => {
+const IconButton: React.FC<ButtonProps> = ({
+  open,
+  children,
+  target = "_self",
+}) => {
   return (
     <div onClick={() => window.open(open, target)} className="icon-button">
       {children}
