@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogEdit from '@components/Blog/BlogEdit/BlogEdit'
+import BlogEdit from '@components/Blog/BlogEdit'
 
 export const metadata = {
   name: 'Editor',
