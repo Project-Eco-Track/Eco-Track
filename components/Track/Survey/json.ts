@@ -64,5 +64,4 @@ export const json = {
   ],
   "cookieName": "Ecotrack-Calculator",
   "widthMode": "responsive"
-  "widthMode": "responsive"
  }

@@ -6,6 +6,7 @@ import BlogCard from "@components/Blog/BlogCard";
 import getBlogs from "@libs/getBlogs";
 import Header from "./Header";
 import "./Blog.scss";
+import NewBlog from "./NewBlog";
 
 export const metadata: Metadata = {
   title: "EcoTrack: Blog",
@@ -34,6 +35,7 @@ const Home: NextPage = async () => {
     <div className="blog-container">
       <Header />
       <div className="blog-wrapper">{content}</div>
+      <NewBlog />
     </div>
   );
 };
