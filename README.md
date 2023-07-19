@@ -75,8 +75,9 @@ pnpm dev
 
 - [x] Blogs: Home
 - [x] Blog: Posts
-- [ ] Blog: Edit Page
-- [ ] Blog: Preview Page
+- [x] Blog: Edit Page
+- [x] Blog: Preview Page
+- [ ] Blog: Filter, search, likes
 
 <br>
 
@@ -84,5 +85,5 @@ pnpm dev
 - [x] About Team Page
 - [ ] Carbon Footprint Page
 - [x] Login Page
-- [x] User Profile page
+- [x] Survey page
 
