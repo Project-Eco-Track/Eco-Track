@@ -1,0 +1,35 @@
+.motion {
+  animation: spin 10s linear  infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    scale: 1;
+  }
+  2% {
+    transform: rotate(-15deg);
+  }
+  3% {
+    transform: rotate(15deg);
+  }
+  4% {
+    transform: rotate(-30deg);
+  }
+  6% {
+    transform: rotate(200deg);
+    scale: 1.1;
+  }
+  7% {
+    transform: rotate(160deg);
+  }
+  9% {
+    transform: rotate(190deg);
+  }
+  10% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+    scale: 1;
+  }
+}
