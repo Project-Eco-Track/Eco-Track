@@ -2,28 +2,39 @@
 @import "@components/Button/Button.scss";
 
 .searchbar {
-  width: 100%;
+  width: 95%;
   height: 70px;
   display: flex;
-  justify-content: center;
-  padding: 10px 0px 0px 0px;
+  justify-content: space-between;
   position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-image: linear-gradient(90deg, #2e2e2eac, $primary-black);
+  border-radius: 30px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
   z-index: 1;
 
   .searchbar-container {
-    width: 95%;
+    width: 100%;
+    padding: 10px;
     align-items: center;
     display: flex;
     justify-content: left;
-    border-radius: 30px;
-    background-image: linear-gradient(90deg, #2e2e2eac, $primary-black);
-    padding: 10px;
     @media screen and (max-width: 979px) {
       width: 92%;
     }
 
     .button {
       @include button;
+      width: max-content;
     }
     .selected {
       background-color: $primary-white;
@@ -38,6 +49,7 @@
     align-items: center;
     @media screen and (max-width: 979px) {
       position: absolute;
+      max-width: 100%;
     }
   }
 
