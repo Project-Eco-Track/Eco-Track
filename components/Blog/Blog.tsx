@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import SearchBar from "./SearchBar/SearchBar";
 import Header from "./Header";
 import "./Blog.scss";
 import NewBlog from "./NewBlog";
@@ -11,7 +10,6 @@ const Home: NextPage = async () => {
     <div className="blog-container">
       <Header />
       <div className="blog-wrapper">
-        <SearchBar />
         <Suspense fallback={<div>Loading...</div>}>
           <BlogFeed />
         </Suspense>

@@ -1,12 +1,27 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import BlogCard from "@components/Blog/BlogCard";
-import getBlogs from "@libs/getBlogs";
+import SearchBar from "@components/Blog/SearchBar";
 
 const BlogFeed = async () => {
-  const blogData: Promise<Blogs[]> = getBlogs();
-  const blogs = await blogData;
+  const [blogData, setBlogData] = useState<Blogs[]>([]);
 
-  const content = blogs.map((blog) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        fetch("/api/getBlogs")
+          .then((res) => res.json())
+          .then((data) => {
+            setBlogData(data);
+          });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const content = blogData.map((blog) => {
     return (
       <BlogCard
         key={blog.BlogID}
@@ -21,7 +36,12 @@ const BlogFeed = async () => {
     );
   });
 
-  return <div className="blog-content">{content}</div>;
+  return (
+    <div className="blog-content">
+      <SearchBar />
+      {content}
+    </div>
+  );
 };
 
 export default BlogFeed;
