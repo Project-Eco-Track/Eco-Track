@@ -18,7 +18,7 @@ interface Props {
 
 const FeedContent: React.FC<Props> = ({ filterData }) => {
   const [blogData, setBlogData] = useState<Blog[]>([]);
-  const [filter, setFilter] = useState<string>();
+  const [filter, setFilter] = useState<string>("Top Picks");
 
   useEffect(() => {
     setFilter(filterData);
@@ -28,7 +28,7 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/getBlogs");
+        const response = await fetch("/api/getBlogs?filter=" + filter);
         const data = await response.json();
         setBlogData(data);
       } catch (err) {
@@ -36,7 +36,7 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
       }
     };
     fetchData();
-  }, [filter]); // Fetch data whenever the filter changes
+  }, [filter]);
 
   const content = blogData.map((blog) => {
     return (
