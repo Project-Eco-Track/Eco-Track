@@ -9,11 +9,9 @@ const Home: NextPage = async () => {
   return (
     <div className="blog-container">
       <Header />
-      <div className="blog-wrapper">
-        <Suspense fallback={<div>Loading...</div>}>
-          <BlogFeed />
-        </Suspense>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <BlogFeed />
+      </Suspense>
       <NewBlog />
     </div>
   );
