@@ -1,19 +1,24 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import FeedContent from "./FeedContent";
 import SearchBar from "../SearchBar";
+
 const BlogFeed = () => {
   const [search, setSearch] = useState<string>("");
-  let filter = "Top Picks";
+  const [filter, setFilter] = useState<string>("Top Picks");
 
   function handleSetFilter(data: string) {
-    filter = data;
+    setFilter(data);
   }
+
+  const memoizedFeedContent = useMemo(() => {
+    return <FeedContent filterData={filter} />;
+  }, [filter]);
 
   return (
     <div className="blog-wrapper">
       <SearchBar handleSetFilter={handleSetFilter} />
-      <FeedContent filterData={filter} />
+      {memoizedFeedContent}
     </div>
   );
 };
