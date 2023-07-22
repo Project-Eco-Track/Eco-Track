@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar";
 
 const BlogFeed = () => {
   const [search, setSearch] = useState<string>("");
-  const [filter, setFilter] = useState<string>("Top Picks");
+  const [filter, setFilter] = useState<string>("Recommended");
 
   function handleSetFilter(data: string) {
     setFilter(data);

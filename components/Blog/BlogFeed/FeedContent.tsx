@@ -18,7 +18,7 @@ interface Props {
 
 const FeedContent: React.FC<Props> = ({ filterData }) => {
   const [blogData, setBlogData] = useState<Blog[]>([]);
-  const [filter, setFilter] = useState<string>("Top Picks");
+  const [filter, setFilter] = useState<string>("Recommended");
 
   useEffect(() => {
     setFilter(filterData);
