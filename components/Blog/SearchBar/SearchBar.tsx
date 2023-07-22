@@ -7,7 +7,7 @@ interface Props {
 }
 
 const SearchBar = ({ handleSetFilter }: Props) => {
-  const [selected, setSelected] = useState<string>("Top Picks");
+  const [selected, setSelected] = useState<string>("Recommended");
 
   const handleFilter = (filter: string) => {
     setSelected(filter);
@@ -18,6 +18,12 @@ const SearchBar = ({ handleSetFilter }: Props) => {
     <div className="searchbar">
       <div className="searchbar-container">
         <div className="searchbar-left">
+          <div
+            className={`button ${selected === "Recommended" ? "selected" : ""}`}
+            onClick={() => handleFilter("Recommended")}
+          >
+           Recommended 
+          </div>
           <div
             className={`button ${selected === "Top Picks" ? "selected" : ""}`}
             onClick={() => handleFilter("Top Picks")}
@@ -36,14 +42,7 @@ const SearchBar = ({ handleSetFilter }: Props) => {
           >
             Popular
           </div>
-          <div
-            className={`button ${
-              selected === "Eco Verified" ? "selected" : ""
-            }`}
-            onClick={() => handleFilter("Eco Verified")}
-          >
-            Eco Verified
-          </div>
+          
         </div>
         <div className="searchbar-right">
           <div className="searchbar-search">
