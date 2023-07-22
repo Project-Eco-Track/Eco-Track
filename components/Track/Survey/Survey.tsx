@@ -16,7 +16,6 @@ const TakeSurvey = () => {
   const survey = new Model(json);
 
   survey.onComplete.add((sender, options) => {
-    alert(JSON.stringify(sender.data, null, 3))
     postCarbonFootprint(JSON.stringify(sender.data, null, 3));
   });
 

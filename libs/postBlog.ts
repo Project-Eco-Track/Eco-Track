@@ -1,23 +1,28 @@
 // Type: Library
+import { postRequest } from "./postRequest";
+
 interface Props {
   title: string;
   content: string;
   description: string;
-  image: any;
+  image: string;
 }
-const postBlog = async ({ title, content, description }: Props) => {
+
+interface T extends Props {
+  date: Date;
+  time: number;
+  // userID: string;
+  // username: string;
+}
+
+const postBlog = async ({ title, content, description, image }: Props) => {
   const url = process.env.POST_BLOG_URL;
-  const res = await fetch(`${url}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ title, content, description }),
-  });
-  if (!res.ok) {
-    return { blogs: null, error: "Something went wrong" };
-  }
-  return res.json();
+  const date = new Date();
+  const time = date.getTime();
+  const payload:T = { title, content, description, image, date, time }; //userID, username
+
+  const res = await postRequest<T>(`${url}`, payload);
+  return JSON.stringify(res);
 };
 
 export default postBlog;
