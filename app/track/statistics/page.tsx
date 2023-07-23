@@ -5,6 +5,8 @@ type Props = {}
 
 export default function Statistics({}: Props) {
   return (
+    <div>
     <Analysis/>
+    </div>
   )
 }

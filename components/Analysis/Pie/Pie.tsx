@@ -64,9 +64,8 @@ const cities: AssetData[] = [
 const valueFormatter = (number: number) => `${Intl.NumberFormat("us").format(number).toString()} tons`;
 
 export default function Pie() {
-
   return (
-    <Card className="max-w-4xl mx-auto">
+    <Card className="max-w-4xl m-0">
       <div className="hidden sm:block">
         <Flex className="space-x-4" justifyContent="start" alignItems="center">
           <Title className="truncate">Chemical Output</Title>
