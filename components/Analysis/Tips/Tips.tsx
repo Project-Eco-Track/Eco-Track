@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid, Text, Title, Col } from "@tremor/react";
+import { Card, Grid, Text, Title, Col, Badge } from "@tremor/react";
 import "./Tips.scss";
 
 type Props = {};
@@ -43,7 +43,8 @@ export default function Tips({}: Props) {
         <Grid className="flex gap-3 w-full tips-grid py-3 px-1">
           {ExampleTips.map((item, index) => (
             <Col numColSpan={1} key={index}>
-              <Card className="w-[200px] h-[125px] p-3">
+              <Card className="w-[200px] h-[150px] overflow-y-auto p-3">
+              <Badge size="xs" className="mb-2 mx-0">{item.type}</Badge>
                 <Text>{item.tip}</Text>
               </Card>
             </Col>
