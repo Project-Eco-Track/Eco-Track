@@ -46,8 +46,9 @@ module.exports = {
             inverted: "#ffffff", // white
           },
         },
+        
         // dark mode
-        "dark-tremor": {
+        "dark mode": {
           brand: {
             faint: "#0B1229", // custom
             muted: "#172554", // blue-950
