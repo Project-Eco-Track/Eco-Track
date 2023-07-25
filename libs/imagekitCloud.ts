@@ -1,16 +1,14 @@
 import ImageKit from "imagekit";
 
-var imagekit = new ImageKit({
+const imagekit = new ImageKit({
   publicKey: `${process.env.IMAGEKIT_PUBLIC_KEY}`,
   privateKey: `${process.env.IMAGEKIT_PRIVATE_KEY}`,
   urlEndpoint: `${process.env.IMAGEKIT_URL_ENDPOINT}`,
 });
 
-export const upload = async (image: string, name: string) => {
-  let url: string = "";
-
-  await imagekit
-    .upload({
+const upload = async (image: string, name: string): Promise<string> => {
+  try {
+    const imageKitResponse = await imagekit.upload({
       file: image,
       fileName: `${name}.jpg`,
       extensions: [
@@ -20,14 +18,18 @@ export const upload = async (image: string, name: string) => {
           minConfidence: 95,
         },
       ],
-    })
-    .then((response) => {
-      url = response["url"];
-      console.log(url);
-      return response;
-    })
-    .catch((error) => {
-      console.log(error);
     });
-  return url;
+
+    if (imageKitResponse.url) {
+      return imageKitResponse.url;
+    } else {
+      console.log("ImageKit response:", imageKitResponse);
+      throw new Error("ImageKit response is empty.");
+    }
+  } catch (error: any) {
+    console.log("ImageKit error:", error);
+    throw new Error("Something went wrong.");
+  }
 };
+
+export default upload;
