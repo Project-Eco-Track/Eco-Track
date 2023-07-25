@@ -5,7 +5,7 @@ const postCarbonFootprint = async (
   userId: string,
   userName: any
 ) => {
-  const url = process.env.POST_CARBON_FOOTPRINT_URL;
+  const url = '/api/carbonFootprint';
   const payload = { ...data, userId, userName };
 
   console.log(payload);
