@@ -2,8 +2,11 @@
 
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
+
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import { useUser } from "@clerk/clerk-react";
+
 import "./BlogEdit.scss";
 import postBlog from "@libs/postBlog";
 
@@ -15,6 +18,8 @@ function BlogEdit() {
   const [description, setDescription] = useState<string>("");
   const [image, setImage] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const { isSignedIn, user, isLoaded } = useUser();
 
   const handleTitleChange = (e: any) => {
     setTitle(e.target.value);
@@ -28,14 +33,19 @@ function BlogEdit() {
     setImage(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    postBlog({
-      title: title,
-      description: description,
-      content: value,
-      image: image,
-    });
+    if (isSignedIn && isLoaded) {
+      postBlog({
+        title: title,
+        description: description,
+        content: value,
+        image: image,
+        userID: user.id,
+        username: user.fullName,
+      });
+    }
   };
 
   return (
@@ -58,7 +68,7 @@ function BlogEdit() {
             id="text-input"
             type="text"
             placeholder="Enter Title"
-            required
+            // required
             onChange={handleTitleChange}
           />
 
@@ -70,7 +80,7 @@ function BlogEdit() {
             id="multiline-input"
             placeholder="Enter Description"
             onChange={handleDescriptionChange}
-            required
+            // required
           ></textarea>
 
           <label className="text-white text-2xl font-bold ml-5 mt-6">
@@ -81,12 +91,12 @@ function BlogEdit() {
             type="file"
             accept="image/*"
             placeholder="Upload Image"
-            required
+            // required
             onChange={handleImageChange}
           />
           <div className="flex mx-5">
             <button type="submit" className="button" disabled={isSubmitting}>
-            {isSubmitting ? "Saving..." : "Save"}
+              {isSubmitting ? "Saving..." : "Save"}
             </button>
           </div>
         </form>
