@@ -9,13 +9,13 @@ export async function postRequest<T>(url: string, payload: T) {
     });
 
     if (!response.ok) {
-      throw new Error("Request failed with status: " + response.status);
+      console.log("Request failed with status: " + response.status);
     }
 
     const data = await response.json();
     return data;
   } catch (error: any) {
     console.error("Error:", error.message);
-    throw new Error("Something went wrong with the request");
+    
   }
 }

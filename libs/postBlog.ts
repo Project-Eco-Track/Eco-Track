@@ -6,20 +6,44 @@ interface Props {
   content: string;
   description: string;
   image: string;
+  userID: string;
+  username: any;
 }
 
 interface T extends Props {
   date: Date;
   time: number;
-  // userID: string;
-  // username: string;
 }
 
-const postBlog = async ({ title, content, description, image }: Props) => {
-  const url = process.env.POST_BLOG_URL;
+const postBlog = async ({
+  title,
+  content,
+  description,
+  userID,
+  username,
+  image,
+}: Props) => {
+  const url = "http://localhost:3001/post/blog";
   const date = new Date();
   const time = date.getTime();
-  const payload:T = { title, content, description, image, date, time }; //userID, username
+
+  const imageURL = await postRequest<{ name: string; image: string }>(
+    "/api/uploadImage",
+    { name: userID, image: image }
+  );
+
+  console.log(image);
+
+  const payload: T = {
+    title,
+    content,
+    description,
+    date,
+    time,
+    userID,
+    username,
+    image: imageURL,
+  };
 
   const res = await postRequest<T>(`${url}`, payload);
   return JSON.stringify(res);
