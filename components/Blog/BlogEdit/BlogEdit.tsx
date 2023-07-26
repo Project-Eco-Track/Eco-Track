@@ -9,7 +9,7 @@ import { useUser } from "@clerk/clerk-react";
 
 import "./BlogEdit.scss";
 import postBlog from "@libs/postBlog";
-import toBase64 from "@libs/toBase64";
+import toBase64 from "@utils/toBase64";
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
