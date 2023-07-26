@@ -42,7 +42,7 @@ const postBlog = async ({
     time,
     userID,
     username,
-    image: imageURL,
+    image: imageURL.url,
   };
 
   const res = await postRequest<T>(`${url}`, payload);
