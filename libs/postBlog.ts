@@ -23,7 +23,7 @@ const postBlog = async ({
   username,
   image,
 }: Props) => {
-  const url = "http://localhost:3001/post/blog";
+  const url = process.env.POST_BLOG_URL;
   const date = new Date();
   const year = date.getFullYear().toString().slice(-2).padStart(2, "0");
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
