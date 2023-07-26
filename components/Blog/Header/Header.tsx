@@ -6,7 +6,16 @@ import getFeaturedBlog from "@libs/getFeaturedBlog";
 
 const Header: React.FC = async () => {
   const data: Blogs = await getFeaturedBlog();
-  const { BlogID, Author, Image_url, Title, Description, Likes, Date } = data;
+  const {
+    BlogID,
+    Author,
+    Image_url,
+    Title,
+    Description,
+    Likes,
+    Date,
+    ReadingTime,
+  } = data;
   return (
     <div className="slider text-white font-bold">
       <Link href={`/blogs/posts/${BlogID}`}>
@@ -18,6 +27,7 @@ const Header: React.FC = async () => {
           Description={Description}
           Likes={Likes}
           Date={Date}
+          ReadingTime={ReadingTime}
         />
       </Link>
     </div>

@@ -10,6 +10,7 @@ interface Blog {
   Description: string;
   Date: string;
   Likes: number;
+  ReadingTime: number;
 }
 
 interface Props {
@@ -49,6 +50,7 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
         description={blog.Description}
         date={blog.Date}
         likes={blog.Likes}
+        ReadingTime={blog.ReadingTime}
       />
     );
   });
