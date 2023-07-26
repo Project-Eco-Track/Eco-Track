@@ -48,7 +48,7 @@ function BlogEdit() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (isSignedIn && isLoaded) {
+    if (isSignedIn && isLoaded && !isSubmitting) {
       try {
         const res = await postBlog({
           title: title,
