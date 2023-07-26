@@ -11,7 +11,7 @@ interface Props {
 }
 
 interface T extends Props {
-  date: Date;
+  date: string;
   time: number;
 }
 
@@ -25,6 +25,11 @@ const postBlog = async ({
 }: Props) => {
   const url = "http://localhost:3001/post/blog";
   const date = new Date();
+  const year = date.getFullYear().toString().slice(-2).padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
+
+  const formattedDate = `${year}-${month}-${day}`;
   const time = date.getTime();
 
   const imageURL = await postRequest<{ name: string; image: string }>(
@@ -38,11 +43,11 @@ const postBlog = async ({
     title,
     content,
     description,
-    date,
+    date: formattedDate,
     time,
     userID,
     username,
-    image: imageURL.url,
+    image: imageURL,
   };
 
   const res = await postRequest<T>(`${url}`, payload);
