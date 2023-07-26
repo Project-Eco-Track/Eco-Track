@@ -9,11 +9,11 @@ const Header: React.FC = async () => {
   const { BlogID, Author, Image_url, Title, Description, Likes, Date } = data;
   return (
     <div className="slider text-white font-bold">
-      <Link href="/blogs/posts/1">
+      <Link href={`/blogs/posts/${BlogID}`}>
         <BlogCard
           BlogID={BlogID}
           Author={Author}
-          Image_url="https://images.pexels.com/photos/288093/pexels-photo-288093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          Image_url={Image_url}
           Title={Title}
           Description={Description}
           Likes={Likes}

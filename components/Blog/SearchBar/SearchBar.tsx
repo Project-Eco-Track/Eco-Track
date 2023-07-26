@@ -34,7 +34,7 @@ const SearchBar = ({ handleSetFilter }: Props) => {
             className={`button ${selected === "Recent" ? "selected" : ""}`}
             onClick={() => handleFilter("Recent")}
           >
-            Recent
+            New
           </div>
           <div
             className={`button ${selected === "Popular" ? "selected" : ""}`}

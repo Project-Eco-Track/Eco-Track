@@ -48,7 +48,7 @@ function BlogEdit() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (isSignedIn && isLoaded) {
+    if (isSignedIn && isLoaded) { 
       postBlog({
         title: title,
         description: description,

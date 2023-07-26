@@ -3,57 +3,58 @@ import { postRequest } from "@libs/postRequest";
 
 export async function POST(request: Request) {
   const data = await request.json();
+  console.log(data)
 
   const userId = data.userId;
   const userName = data.userName;
 
   const transportWeightage = {
-    commuteMethod: data.transportWeightage.commuteMethod,
-    weeklyMiles: data.transportWeightage.weeklyMiles,
-    carpoolFrequency: data.transportWeightage.carpoolFrequency,
-    electricVehicle: data.transportWeightage.electricVehicle,
-    airTravelFrequency: data.transportWeightage.airTravelFrequency,
+    commuteMethod: data.commuteMethod,
+    weeklyMiles: data.weeklyMiles,
+    carpoolFrequency: data.carpoolFrequency,
+    electricVehicle: data.electricVehicle,
+    airTravelFrequency: data.airTravelFrequency,
   };
   const energyUsageWeightage = {
     energyEfficientAppliances:
-      data.energyUsageWeightage.energyEfficientAppliances,
-    lightsAndAppliances: data.energyUsageWeightage.lightsAndAppliances,
+      data.energyEfficientAppliances,
+    lightsAndAppliances: data.lightsAndAppliances,
     energyEfficientLightBulbs:
-      data.energyUsageWeightage.energyEfficientLightBulbs,
-    programmableThermostat: data.energyUsageWeightage.programmableThermostat,
-    renewableEnergyUsage: data.energyUsageWeightage.renewableEnergyUsage,
+      data.energyEfficientLightBulbs,
+    programmableThermostat: data.programmableThermostat,
+    renewableEnergyUsage: data.renewableEnergyUsage,
   };
   const purchasingHabitWeightage = {
     meatAndDairyConsumption:
-      data.purchasingHabitWeightage.meatAndDairyConsumption,
+      data.meatAndDairyConsumption,
     locallySourcedOrganicFood:
-      data.purchasingHabitWeightage.locallySourcedOrganicFood,
+      data.locallySourcedOrganicFood,
     processedFoodsConsumption:
-      data.purchasingHabitWeightage.processedFoodsConsumption,
+      data.processedFoodsConsumption,
     fruitsAndVegetablesConsumption:
-      data.purchasingHabitWeightage.fruitsAndVegetablesConsumption,
-    foodWasteFrequency: data.purchasingHabitWeightage.foodWasteFrequency,
+      data.fruitsAndVegetablesConsumption,
+    foodWasteFrequency: data.foodWasteFrequency,
   };
   const wasteManagementWeightage = {
     minimalPackagingBulkProducts:
-      data.wasteManagementWeightage.minimalPackagingBulkProducts,
+      data.minimalPackagingBulkProducts,
     secondHandItemsPurchase:
-      data.wasteManagementWeightage.secondHandItemsPurchase,
+      data.secondHandItemsPurchase,
     consideringEnvironmentalImpact:
-      data.wasteManagementWeightage.consideringEnvironmentalImpact,
+      data.consideringEnvironmentalImpact,
     ecoFriendlyBrandsPreference:
-      data.wasteManagementWeightage.ecoFriendlyBrandsPreference,
+      data.ecoFriendlyBrandsPreference,
     singleUsePlasticsAvoidance:
-      data.wasteManagementWeightage.singleUsePlasticsAvoidance,
+      data.singleUsePlasticsAvoidance,
   };
   const dietWeightage = {
-    recyclingHabits: data.dietWeightage.recyclingHabits,
-    organicWasteComposting: data.dietWeightage.organicWasteComposting,
-    reusableContainersAndBags: data.dietWeightage.reusableContainersAndBags,
+    recyclingHabits: data.recyclingHabits,
+    organicWasteComposting: data.organicWasteComposting,
+    reusableContainersAndBags: data.reusableContainersAndBags,
     reducingWasteByAvoidingUnnecessaryPackaging:
-      data.dietWeightage.reducingWasteByAvoidingUnnecessaryPackaging,
+      data.reducingWasteByAvoidingUnnecessaryPackaging,
     awarenessOfProperDisposalMethods:
-      data.dietWeightage.awarenessOfProperDisposalMethods,
+      data.awarenessOfProperDisposalMethods,
   };
 
   const payload = {

@@ -17,15 +17,17 @@ const TakeSurvey = () => {
   };
 
   const survey = new Model(json);
-  survey.onComplete.add((sender) => {
+  survey.onComplete.add((sender, options) => {
+    const result = JSON.stringify(sender.data, null, 3);
+    alert(result);
     if (isSignedIn && isLoaded) {
       postCarbonFootprint(
-        JSON.stringify(sender.data, null, 3),
+        result.replace(/\\|\n/g , ''),
         user.id,
         user.fullName
       );
     }
-  }); 
+  });
   return <Survey model={survey} />;
 };
 

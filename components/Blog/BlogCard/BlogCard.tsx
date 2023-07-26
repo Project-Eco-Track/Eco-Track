@@ -36,7 +36,7 @@ const BlogCard: React.FC<Props> = ({
         <div className="content">
           <h1>{title}</h1>
           <div className="overflow-hidden">
-            <p>{description}</p>
+            <p className='max-h-16'>{description}</p>
             <div className="flex justify-evenly font-bold mt-4">
               <p>
                 <i className="fa-solid fa-at mx-2"></i>

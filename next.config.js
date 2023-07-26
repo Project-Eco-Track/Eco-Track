@@ -7,6 +7,7 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
       "images.pexels.com",
       "cdni.iconscout.com",
+      "ik.imagekit.io"
     ],
   },
 };
