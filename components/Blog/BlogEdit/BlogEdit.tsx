@@ -44,19 +44,28 @@ function BlogEdit() {
         });
     }
   }
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (isSignedIn && isLoaded) { 
-      postBlog({
-        title: title,
-        description: description,
-        content: value,
-        image: image,
-        userID: user.id,
-        username: user.fullName,
-      });
+    if (isSignedIn && isLoaded) {
+      try {
+        const res = await postBlog({
+          title: title,
+          description: description,
+          content: value,
+          image: image,
+          userID: user.id,
+          username: user.fullName,
+        });
+
+        const result = JSON.parse(res);
+        const BlogID = result.data.rows[0].BlogID;
+        window.location.href = `/blogs/posts/${BlogID}`;
+      } catch (error) {
+        console.error("Error creating blog:", error);
+        console.log("Error creating blog:", error);
+      }
     }
   };
 
@@ -80,7 +89,7 @@ function BlogEdit() {
             id="text-input"
             type="text"
             placeholder="Enter Title"
-            // required
+            required
             onChange={handleTitleChange}
           />
 
@@ -92,7 +101,7 @@ function BlogEdit() {
             id="multiline-input"
             placeholder="Enter Description"
             onChange={handleDescriptionChange}
-            // required
+            required
           ></textarea>
 
           <label className="text-white text-2xl font-bold ml-5 mt-6">
@@ -105,6 +114,7 @@ function BlogEdit() {
             className="shadow appearance-none py-2 px-3 text-white bg-transparent border-b-2 text-xl font-bold leading-tight focus:outline-none focus:shadow-outline h-16 m-5"
             placeholder="Upload Image"
             onChange={handleImageChange}
+            required
           />
 
           <div className="flex mx-5">

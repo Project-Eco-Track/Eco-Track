@@ -1,9 +1,6 @@
 import "./globals.scss";
-import { Inter } from "next/font/google";
 import NavBar from "@components/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Eco-Track",
@@ -32,7 +29,7 @@ export default function RootLayout({
             referrerPolicy="no-referrer"
           />
         </head>
-        <body className={inter.className}>
+        <body>
           <div className="md:px-0 lg:px-4 flex flex-col m-auto">
             <NavBar />
             {children}

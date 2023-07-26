@@ -37,8 +37,6 @@ const postBlog = async ({
     { name: userID, image: image }
   );
 
-  console.log(image);
-
   const payload: T = {
     title,
     content,
