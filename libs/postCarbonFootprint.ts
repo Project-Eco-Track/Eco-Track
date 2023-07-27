@@ -1,9 +1,11 @@
 // type: Library
 import { postRequest } from "./postRequest";
+import { formateCF } from "@utils/formateCF";
 
 const postCarbonFootprint = async (data: any, userId: string) => {
-  const url = "http://localhost:3001/post/carbon-footprint";
-  const payload = { ...data }; //userId
+  const url = "https://sangria-swordfish-wrap.cyclic.app/post/carbon-footprint";
+  const json = await formateCF(JSON.parse(data));
+  const payload = { ...json }; //userId
   const res = postRequest<any>(`${url}`, payload);
   return JSON.stringify(res);
 };
