@@ -13,7 +13,7 @@ export async function formateCF(data: any) {
     programmableThermostat: data.programmableThermostat,
     renewableEnergyUsage: data.renewableEnergyUsage,
   };
-  const purchasingHabitWeightage = {
+  const dietWeightage = {
     meatAndDairyConsumption: data.meatAndDairyConsumption,
     locallySourcedOrganicFood: data.locallySourcedOrganicFood,
     processedFoodsConsumption: data.processedFoodsConsumption,
@@ -27,7 +27,7 @@ export async function formateCF(data: any) {
     ecoFriendlyBrandsPreference: data.ecoFriendlyBrandsPreference,
     singleUsePlasticsAvoidance: data.singleUsePlasticsAvoidance,
   };
-  const dietWeightage = {
+  const  purchasingHabitWeightage= {
     recyclingHabits: data.recyclingHabits,
     organicWasteComposting: data.organicWasteComposting,
     reusableContainersAndBags: data.reusableContainersAndBags,
