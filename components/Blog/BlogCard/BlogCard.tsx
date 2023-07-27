@@ -11,6 +11,7 @@ interface Props {
   description: string;
   date: string;
   likes: number;
+  ReadingTime: number;
 }
 
 const BlogCard: React.FC<Props> = ({
@@ -21,6 +22,7 @@ const BlogCard: React.FC<Props> = ({
   description,
   date,
   likes,
+  ReadingTime
 }) => {
   const url: string = `/blogs/posts/${id}`;
   return (
@@ -36,14 +38,15 @@ const BlogCard: React.FC<Props> = ({
         <div className="content">
           <h1>{title}</h1>
           <div className="overflow-hidden">
-            <p className='max-h-16'>{description}</p>
+            <p className="max-h-16">{description}</p>
             <div className="flex justify-evenly font-bold mt-4">
               <p>
                 <i className="fa-solid fa-at mx-2"></i>
                 {author}
               </p>
               <p>
-                <i className="fa-brands fa-readme mx-2"></i>2 min
+                <i className="fa-brands fa-readme mx-2"></i>
+                {ReadingTime} min read
               </p>
               <p>
                 <i className="fa-solid fa-calendar-days mx-2"></i>

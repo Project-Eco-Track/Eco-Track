@@ -10,6 +10,7 @@ const BlogCard = async ({
   Description,
   Likes,
   Date,
+  ReadingTime
 }: Blogs) => {
   return (
     <div className="featured-card cursor-pointer">
@@ -24,7 +25,7 @@ const BlogCard = async ({
               {Author}
             </p>
             <p>
-              <i className="fa-brands fa-readme mx-2"></i>2 min
+              <i className="fa-brands fa-readme mx-2"></i>{ReadingTime} min read
             </p>
             <p>
               <i className="fa-solid fa-calendar-days mx-2"></i>
