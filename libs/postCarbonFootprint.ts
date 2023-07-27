@@ -12,7 +12,7 @@ const postCarbonFootprint = async (data: any, userId: string) => {
   const day = date.getDate().toString().padStart(2, "0");
   const formattedDate = `${year}-${month}-${day}`;
 
-  const payload = { ...json, userId, date: formattedDate };
+  const payload = { ...json, userID: userId, Date: formattedDate };
   const res = postRequest<any>(`${url}`, payload);
   return JSON.stringify(res);
 };
