@@ -12,18 +12,12 @@ import "./Survey.scss";
 const TakeSurvey = () => {
   const { isSignedIn, user, isLoaded } = useUser();
 
-  window.onbeforeunload = function () {
-    return "Refreshing the page may cause unexpected behavior";
-  };
-
   const survey = new Model(json);
-  survey.onComplete.add((sender, options) => {
+  survey.onComplete.add(async (sender, options) => {
     const result = JSON.stringify(sender.data, null, 3);
     if (isSignedIn && isLoaded) {
-      postCarbonFootprint(
-        result.replace(/\\|\n/g , ''),
-        user.id,
-      );
+      await postCarbonFootprint(result.replace(/\\|\n/g, ""), user.id);
+      window.location.href = "/track/statistics";
     }
   });
   return <Survey model={survey} />;

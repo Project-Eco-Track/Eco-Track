@@ -1,7 +1,7 @@
 export const json = {
   title: "EcoTrack",
   description: "Carbon footprint calculator",
-  completedHtml: "<h3>Carbon footprint is: </h3>",
+  completedHtml: "<h3>Calculating your Carbon Footprint, please wait</h3>",
   pages: [
     {
       name: "transportation",
