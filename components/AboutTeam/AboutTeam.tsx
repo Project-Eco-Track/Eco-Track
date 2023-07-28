@@ -13,7 +13,6 @@ const AboutTeam: React.FC = () => {
         <p className="team-description">
           Meet our amazing team of professionals who make things happen.
         </p>
-        <button className="styled-button">Learn More</button>
       </div>
 
       <div className="team-members">
