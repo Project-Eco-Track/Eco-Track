@@ -1,6 +1,6 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import BlogCard from "@components/Blog/BlogCard";
+import LoadingCard from "../LoadingBar/LoadingBar";
 
 interface Blog {
   BlogID: number;
@@ -19,6 +19,7 @@ interface Props {
 
 const FeedContent: React.FC<Props> = ({ filterData }) => {
   const [blogData, setBlogData] = useState<Blog[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [filter, setFilter] = useState<string>("Recommended");
 
   useEffect(() => {
@@ -28,6 +29,7 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true); // Set loading to true before fetching data
       try {
         const response = await fetch("/api/getBlogs?filter=" + filter);
         const data = await response.json();
@@ -35,6 +37,7 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
       } catch (err) {
         console.log(err);
       }
+      setIsLoading(false); // Set loading to false after fetching and setting data
     };
     fetchData();
   }, [filter]);
@@ -55,7 +58,20 @@ const FeedContent: React.FC<Props> = ({ filterData }) => {
     );
   });
 
-  return <div className="blog-content">{content}</div>;
+  return (
+    <div className="blog-content">
+      {isLoading ? (
+        <>
+          <LoadingCard />
+          <LoadingCard />
+          <LoadingCard />
+          <LoadingCard />
+        </>
+      ) : (
+        content
+      )}
+    </div>
+  );
 };
 
 export default FeedContent;

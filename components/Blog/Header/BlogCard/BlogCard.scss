@@ -19,6 +19,23 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      background: linear-gradient(10deg, #1d1d1d, #797979, #4f4f4f);
+      background-size: 400% 400%;
+      background-size: 400% 400%;
+
+      @keyframes loading {
+        0% {
+          background-position: 100% 0%;
+        }
+
+        50% {
+          background-position: 0% 100%;
+        }
+
+        100% {
+          background-position: 100% 0%;
+        }
+      }
     }
 
     .blog-details {

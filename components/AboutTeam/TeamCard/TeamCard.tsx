@@ -49,7 +49,9 @@ const TeamCard: React.FC<Props> = ({
             width={300}
             height={300}
           />
-          <p className="member-description">{description}</p>
+          <p className="member-description">
+            &quot;<b>{description}&quot;</b>
+          </p>
         </div>
 
         <div className="social-media-icons">

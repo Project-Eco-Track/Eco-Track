@@ -1,0 +1,32 @@
+.loading-card {
+  width: 45%;
+  height: 400px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: loading 2s reverse infinite;
+  background: linear-gradient(10deg, #1d1d1d, #797979, #4f4f4f);
+  background-size: 400% 400%;
+
+  @keyframes loading {
+    0% {
+      background-position: 100% 0%;
+    }
+
+    50% {
+      background-position: 0% 100%;
+    }
+
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex: 1 0 90%;
+    margin: 20px;
+    height: 500px;
+  }
+}

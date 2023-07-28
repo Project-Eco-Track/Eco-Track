@@ -8,6 +8,10 @@ const nextConfig = {
       "images.pexels.com",
       "cdni.iconscout.com",
       "ik.imagekit.io",
+
+
+      "images.wsj.net"
+
     ],
   },
 };
