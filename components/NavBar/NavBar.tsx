@@ -61,7 +61,7 @@ const NavBar: React.FC = () => {
 
           <IconButton open="/">
             <i
-              className="fa-brands fa-instagram fa-xl"
+              className="fa-brands fa-dyalog fa-xl"
               style={{ color: "#2e2e2e" }}
             />
           </IconButton>
