@@ -49,27 +49,28 @@ const TeamCard: React.FC<Props> = ({
             width={300}
             height={300}
           />
-          <p className="member-description">{description}</p>
+          <p className="member-description">
+            &quot;<b>{description}&quot;</b>
+          </p>
         </div>
 
         <div className="social-media-icons">
-
-        {socialMedia.twitter !== "" && (
-          <Link href={socialMedia.twitter} target="_blank">
-            <i className="fab fa-twitter"></i>
-          </Link>
+          {socialMedia.twitter !== "" && (
+            <Link href={socialMedia.twitter} target="_blank">
+              <i className="fab fa-twitter"></i>
+            </Link>
           )}
 
           {socialMedia.linkedin !== "" && (
-          <Link href={socialMedia.linkedin} target="_blank">
-            <i className="fab fa-linkedin"></i>
-          </Link>
+            <Link href={socialMedia.linkedin} target="_blank">
+              <i className="fab fa-linkedin"></i>
+            </Link>
           )}
 
           {socialMedia.github !== "" && (
-          <Link href={socialMedia.github} target="_blank">
-            <i className="fab fa-github"></i>
-          </Link>
+            <Link href={socialMedia.github} target="_blank">
+              <i className="fab fa-github"></i>
+            </Link>
           )}
 
           {socialMedia.instagram !== "" && (

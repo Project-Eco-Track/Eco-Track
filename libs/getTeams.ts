@@ -1,9 +1,9 @@
 const data = [
     {
       name: "Akshay",
-      position: "CEO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "./images/profile.jpg",
+      position: "FrontEnd, Cloud, Database",
+      description: "Coding is the art of transforming imagination into reality, turning blank screens into interactive worlds",
+      image: "https://images.wsj.net/im-491405?width=1280&size=1",
       illustration: "https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png",
       socialMedia: {
         twitter: "",
@@ -14,7 +14,7 @@ const data = [
     },
     {
       name: "Ariv",
-      position: "CEO",
+      position: "FrontEnd, Design",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image: "/images/profile.jpg",
       illustration: "https://cdni.iconscout.com/illustration/premium/thumb/front-end-developer-doing-web-designing-4487948-3722636.png",
@@ -27,7 +27,7 @@ const data = [
     },
     {
       name: "Mike",
-      position: "CEO",
+      position: "Backend",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image: "/images/profile.jpg",
       illustration: "https://cdni.iconscout.com/illustration/premium/thumb/back-end-developer-working-on-a-laptop-6765194-5607779.png",
@@ -40,7 +40,7 @@ const data = [
     },
     {
       name: "Riya",
-      position: "CEO",
+      position: "Frontend",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image: "/images/profile.jpg",
       illustration: "https://cdni.iconscout.com/illustration/premium/thumb/woman-programmer-working-on-a-new-project-6765192-5607777.png",
