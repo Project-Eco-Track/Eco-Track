@@ -19,7 +19,7 @@ const BlogPost = async (props: Props) => {
     Content,
     Date,
     Likes,
-    ReadingTime
+    ReadingTime,
   } = await data;
   return (
     <>
@@ -39,7 +39,7 @@ const BlogPost = async (props: Props) => {
         <div className="mt-20 text-start self-center mx-20 flex justify-center w-screen">
           <div className="self-baseline">
             <Link href="/blogs" className="cursor-pointer underline">
-            <i className="fa-solid fa-arrow-left underline"></i> Blogs
+              <i className="fa-solid fa-arrow-left underline"></i> Blogs
             </Link>
           </div>
           <div className="mx-72 text-center">

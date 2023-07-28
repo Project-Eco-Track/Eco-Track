@@ -30,7 +30,7 @@ const BadgePage = () => {
         (data, index) =>
           `${data.color} ${data.percentage}%${
             index < languageData.length - 1 ? "," : ""
-          }`
+          }`,
       )
       .join("")})`,
   };

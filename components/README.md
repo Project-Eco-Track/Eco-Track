@@ -3,6 +3,7 @@
 - Start the first letter of the component name with an uppercase letter, and use the same name for creating the SCSS file. This naming convention helps maintain consistency and clarity when referencing and importing components, ensuring a standardized approach throughout the project.
 
 ie
+
 ```shell
 /components
 ├── Component

@@ -27,7 +27,7 @@ export async function formateCF(data: any) {
     ecoFriendlyBrandsPreference: data.ecoFriendlyBrandsPreference,
     singleUsePlasticsAvoidance: data.singleUsePlasticsAvoidance,
   };
-  const purchasingHabitWeightage= {
+  const purchasingHabitWeightage = {
     recyclingHabits: data.recyclingHabits,
     organicWasteComposting: data.organicWasteComposting,
     reusableContainersAndBags: data.reusableContainersAndBags,

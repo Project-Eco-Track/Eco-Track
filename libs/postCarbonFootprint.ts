@@ -3,7 +3,8 @@ import { postRequest } from "./postRequest";
 import { formateCF } from "@utils/formateCF";
 
 const postCarbonFootprint = async (data: any, userId: string) => {
-  const url = "https://sangria-swordfish-wrap.cyclic.app/calculateCarbonFootprint";
+  const url =
+    "https://sangria-swordfish-wrap.cyclic.app/calculateCarbonFootprint";
   const json = await formateCF(JSON.parse(data));
 
   const date = new Date();

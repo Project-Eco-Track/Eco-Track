@@ -13,7 +13,6 @@ $link-color: #5585b5;
     font-weight: 200;
     line-height: 55px;
     margin-top: 30px;
-
   }
 
   a {
@@ -123,7 +122,7 @@ $link-color: #5585b5;
   }
 
   @media screen and (max-width: 768px) {
-    scale:.9;
+    scale: 0.9;
     margin-top: 0;
     padding: 0;
     transform: translateY(-5%);

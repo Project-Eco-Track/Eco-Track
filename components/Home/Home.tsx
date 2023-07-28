@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         <Card />
       </div>
       <div className="right">
-        <Rows/>
+        <Rows />
       </div>
     </div>
   );

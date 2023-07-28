@@ -1,2 +1,2 @@
-import Analysis from './Analysis';
+import Analysis from "./Analysis";
 export default Analysis;

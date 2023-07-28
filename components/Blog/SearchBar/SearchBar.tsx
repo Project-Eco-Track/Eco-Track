@@ -22,7 +22,7 @@ const SearchBar = ({ handleSetFilter }: Props) => {
             className={`button ${selected === "Recommended" ? "selected" : ""}`}
             onClick={() => handleFilter("Recommended")}
           >
-           Recommended 
+            Recommended
           </div>
           <div
             className={`button ${selected === "Top Picks" ? "selected" : ""}`}
@@ -42,7 +42,6 @@ const SearchBar = ({ handleSetFilter }: Props) => {
           >
             Popular
           </div>
-          
         </div>
         <div className="searchbar-right">
           <div className="searchbar-search">

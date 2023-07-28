@@ -3,7 +3,7 @@ import { postRequest } from "@libs/postRequest";
 
 export async function POST(request: Request) {
   const data = await request.json();
-  console.log(data)
+  console.log(data);
 
   const userId = data.userId;
   const userName = data.userName;
@@ -16,36 +16,25 @@ export async function POST(request: Request) {
     airTravelFrequency: data.airTravelFrequency,
   };
   const energyUsageWeightage = {
-    energyEfficientAppliances:
-      data.energyEfficientAppliances,
+    energyEfficientAppliances: data.energyEfficientAppliances,
     lightsAndAppliances: data.lightsAndAppliances,
-    energyEfficientLightBulbs:
-      data.energyEfficientLightBulbs,
+    energyEfficientLightBulbs: data.energyEfficientLightBulbs,
     programmableThermostat: data.programmableThermostat,
     renewableEnergyUsage: data.renewableEnergyUsage,
   };
   const purchasingHabitWeightage = {
-    meatAndDairyConsumption:
-      data.meatAndDairyConsumption,
-    locallySourcedOrganicFood:
-      data.locallySourcedOrganicFood,
-    processedFoodsConsumption:
-      data.processedFoodsConsumption,
-    fruitsAndVegetablesConsumption:
-      data.fruitsAndVegetablesConsumption,
+    meatAndDairyConsumption: data.meatAndDairyConsumption,
+    locallySourcedOrganicFood: data.locallySourcedOrganicFood,
+    processedFoodsConsumption: data.processedFoodsConsumption,
+    fruitsAndVegetablesConsumption: data.fruitsAndVegetablesConsumption,
     foodWasteFrequency: data.foodWasteFrequency,
   };
   const wasteManagementWeightage = {
-    minimalPackagingBulkProducts:
-      data.minimalPackagingBulkProducts,
-    secondHandItemsPurchase:
-      data.secondHandItemsPurchase,
-    consideringEnvironmentalImpact:
-      data.consideringEnvironmentalImpact,
-    ecoFriendlyBrandsPreference:
-      data.ecoFriendlyBrandsPreference,
-    singleUsePlasticsAvoidance:
-      data.singleUsePlasticsAvoidance,
+    minimalPackagingBulkProducts: data.minimalPackagingBulkProducts,
+    secondHandItemsPurchase: data.secondHandItemsPurchase,
+    consideringEnvironmentalImpact: data.consideringEnvironmentalImpact,
+    ecoFriendlyBrandsPreference: data.ecoFriendlyBrandsPreference,
+    singleUsePlasticsAvoidance: data.singleUsePlasticsAvoidance,
   };
   const dietWeightage = {
     recyclingHabits: data.recyclingHabits,
@@ -53,8 +42,7 @@ export async function POST(request: Request) {
     reusableContainersAndBags: data.reusableContainersAndBags,
     reducingWasteByAvoidingUnnecessaryPackaging:
       data.reducingWasteByAvoidingUnnecessaryPackaging,
-    awarenessOfProperDisposalMethods:
-      data.awarenessOfProperDisposalMethods,
+    awarenessOfProperDisposalMethods: data.awarenessOfProperDisposalMethods,
   };
 
   const payload = {

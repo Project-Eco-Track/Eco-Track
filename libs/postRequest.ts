@@ -16,6 +16,5 @@ export async function postRequest<T>(url: string, payload: T) {
     return data;
   } catch (error: any) {
     console.error("Error:", error.message);
-    
   }
 }
