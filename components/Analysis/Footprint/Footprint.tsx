@@ -1,4 +1,13 @@
-import { Card, Metric, Text, Flex, BadgeDelta, DeltaType, Color, Grid } from "@tremor/react";
+import {
+  Card,
+  Metric,
+  Text,
+  Flex,
+  BadgeDelta,
+  DeltaType,
+  Color,
+  Grid,
+} from "@tremor/react";
 
 const colors: { [key: string]: Color } = {
   increase: "emerald",
@@ -31,15 +40,19 @@ const categories: {
   },
 ];
 
-export default function Footprint() {
+export default function Footprint({ footprint }: { footprint: string }) {
   return (
     <Grid numItems={1} className="gap-3 flex-1">
       {categories.map((item) => (
         <Card key={item.title}>
           <Text>{item.title}</Text>
-          <Flex justifyContent="start" alignItems="baseline" className="truncate space-x-3">
-            <Metric>{item.metric}</Metric>
-            <Text className="truncate">from {item.metricPrev}</Text>
+          <Flex
+            justifyContent="start"
+            alignItems="baseline"
+            className="truncate space-x-3"
+          >
+            <Metric>{footprint}</Metric>
+            {/* <Text className="truncate">from {item.metricPrev}</Text> */}
           </Flex>
           <Flex justifyContent="start" className="space-x-2 mt-4">
             <BadgeDelta deltaType={item.deltaType} />
