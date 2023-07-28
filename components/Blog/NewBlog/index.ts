@@ -1,2 +1,2 @@
-import NewBlog from './NewBlog';
+import NewBlog from "./NewBlog";
 export default NewBlog;

@@ -44,7 +44,9 @@ export default function Tips({}: Props) {
           {ExampleTips.map((item, index) => (
             <Col numColSpan={1} key={index}>
               <Card className="w-[200px] h-[150px] overflow-y-auto p-3">
-              <Badge size="xs" className="mb-2 mx-0">{item.type}</Badge>
+                <Badge size="xs" className="mb-2 mx-0">
+                  {item.type}
+                </Badge>
                 <Text>{item.tip}</Text>
               </Card>
             </Col>

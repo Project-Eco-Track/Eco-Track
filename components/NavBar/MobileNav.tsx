@@ -6,16 +6,28 @@ import "./NavBar.scss";
 const MobileNav = () => {
   return (
     <>
-      <Link href='/about' className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20">
+      <Link
+        href="/about"
+        className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20"
+      >
         Our Team
       </Link>
-      <Link  href='/badges' className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20">
+      <Link
+        href="/badges"
+        className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20"
+      >
         Badge
       </Link>
-      <Link href='/blogs' className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20">
+      <Link
+        href="/blogs"
+        className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20"
+      >
         Blogs
       </Link>
-      <Link href='/track' className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20">
+      <Link
+        href="/track"
+        className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20"
+      >
         Carbon Track
       </Link>
 

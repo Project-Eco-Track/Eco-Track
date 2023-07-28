@@ -8,7 +8,7 @@ const Home = () => {
         <div className="flex w-52"></div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Home;

@@ -22,7 +22,7 @@ const BlogCard: React.FC<Props> = ({
   description,
   date,
   likes,
-  ReadingTime
+  ReadingTime,
 }) => {
   const url: string = `/blogs/posts/${id}`;
   return (

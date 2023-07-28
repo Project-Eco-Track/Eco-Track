@@ -1,7 +1,6 @@
 import React from "react";
 import "./BlogCard.scss";
 
-
 const BlogCard = async ({
   BlogID,
   Author,
@@ -10,7 +9,7 @@ const BlogCard = async ({
   Description,
   Likes,
   Date,
-  ReadingTime
+  ReadingTime,
 }: Blogs) => {
   return (
     <div className="featured-card cursor-pointer">
@@ -25,7 +24,8 @@ const BlogCard = async ({
               {Author}
             </p>
             <p>
-              <i className="fa-brands fa-readme mx-2"></i>{ReadingTime} min read
+              <i className="fa-brands fa-readme mx-2"></i>
+              {ReadingTime} min read
             </p>
             <p>
               <i className="fa-solid fa-calendar-days mx-2"></i>

@@ -1,11 +1,11 @@
-import { NextPage } from "next"
-import AboutTeam from "@/components/AboutTeam/AboutTeam"
-const page:NextPage = () => {
+import { NextPage } from "next";
+import AboutTeam from "@/components/AboutTeam/AboutTeam";
+const page: NextPage = () => {
   return (
     <div>
-      <AboutTeam/>
+      <AboutTeam />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

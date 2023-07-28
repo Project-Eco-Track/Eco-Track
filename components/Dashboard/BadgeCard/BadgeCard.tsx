@@ -15,14 +15,14 @@ const BadgeCard: React.FC<BadgeCardProps> = ({ img, desc, starNum, title }) => {
     <>
       <div className="aspect-square bg-gray-800 w-72 flex-col flex gap-5 items-center rounded-xl p-5 border border-gray-700">
         <div className="flex gap-2">
-        {Array.from({ length: starNum }).map((_, i) => (
-          <div key={i}>
-            <div className="text-yellow-500">
-              <Star size={25} />
+          {Array.from({ length: starNum }).map((_, i) => (
+            <div key={i}>
+              <div className="text-yellow-500">
+                <Star size={25} />
+              </div>
             </div>
-          </div>
-        ))}
-          </div>
+          ))}
+        </div>
         <div className="flex-1 flex items-center text-green-800">
           <TreePine size={110} />
         </div>

@@ -113,7 +113,7 @@ nav {
         background: #000;
         border: #000;
         height: 450px;
-        opacity: .9;
+        opacity: 0.9;
       }
     }
 
@@ -127,15 +127,15 @@ nav {
     @keyframes showContent {
       0% {
         opacity: 0;
-        scale:0;
+        scale: 0;
       }
       50% {
         opacity: 0;
-        scale:0;
+        scale: 0;
       }
       100% {
         opacity: 1;
-        scale:1;
+        scale: 1;
       }
     }
 

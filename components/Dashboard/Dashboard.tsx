@@ -17,11 +17,11 @@ const Dashboard: React.FC = () => {
           desc={"Earned for planting 5 trees"}
           title={"Tree Planter"}
         />
-        <BadgeCardSkeleton/>
-        <BadgeCardSkeleton/>
-        <BadgeCardSkeleton/>
-        <BadgeCardSkeleton/>
-        <BadgeCardSkeleton/>
+        <BadgeCardSkeleton />
+        <BadgeCardSkeleton />
+        <BadgeCardSkeleton />
+        <BadgeCardSkeleton />
+        <BadgeCardSkeleton />
       </div>
     </>
   );

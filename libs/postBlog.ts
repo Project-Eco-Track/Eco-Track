@@ -35,7 +35,7 @@ const postBlog = async ({
 
   const imageURL = await postRequest<{ name: string; image: string }>(
     "/api/uploadImage",
-    { name: userID, image: image }
+    { name: userID, image: image },
   );
 
   const payload: T = {
