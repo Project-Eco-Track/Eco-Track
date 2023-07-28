@@ -4,9 +4,10 @@ type Blogs = {
   Image_url: string;
   Title: string;
   Description: string;
-    Date: string;
+  ReadingTime: number;
+  Date: string;
   //   Category: string;
-    Likes: number;
+  Likes: number;
   //   tags: string[];
 };
 
@@ -18,6 +19,7 @@ type BlogPost = {
   Description: string;
   Content: string;
   Date: string;
+  ReadingTime: number;
   //   Category: string;
   Likes: number;
   //   tags: string[];

@@ -1,13 +1,11 @@
 import React from "react";
-import Dashboard from "@components/Dashboard/Dashboard";
-
-const BadgePage: React.FC = () => {
+import BadgePage from "./badges";
+const page = () => {
   return (
-    <div>
-      <Dashboard />
+    <div style={{ backgroundColor: "#2e2e2e" }}>
+      <BadgePage />
     </div>
   );
 };
 
-export default BadgePage;
-
+export default page;

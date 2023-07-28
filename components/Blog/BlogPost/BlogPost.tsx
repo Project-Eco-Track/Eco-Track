@@ -19,6 +19,7 @@ const BlogPost = async (props: Props) => {
     Content,
     Date,
     Likes,
+    ReadingTime
   } = await data;
   return (
     <>
@@ -31,6 +32,7 @@ const BlogPost = async (props: Props) => {
           Description={Description}
           Likes={Likes}
           Date={Date}
+          ReadingTime={ReadingTime}
         />
       </div>
       <div className="post-container font-sans font-bold text-lg ">
