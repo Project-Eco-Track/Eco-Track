@@ -47,6 +47,7 @@ const BadgePage = () => {
 
   return (
     <ChakraProvider theme={customTheme}>
+      <Box m={20}>
       <Flex
         direction="column"
         align="center"
@@ -96,6 +97,7 @@ const BadgePage = () => {
             <Badge colorScheme="blue">New</Badge>
             <Badge colorScheme="pink">0</Badge>
           </HStack>
+        </Box>
         </Box>
 
         <Box
