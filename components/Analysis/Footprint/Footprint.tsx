@@ -32,7 +32,7 @@ const categories: {
     deltaType: "moderateIncrease",
   },
   {
-    title: "Something",
+    title: "Average Carbon Footprint",
     metric: "40,598",
     metricPrev: "45,564",
     delta: "10.9%",
