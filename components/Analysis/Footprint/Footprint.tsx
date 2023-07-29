@@ -30,14 +30,7 @@ const categories: {
     metricPrev: "9,456",
     delta: "34.3%",
     deltaType: "moderateIncrease",
-  },
-  {
-    title: "Average Carbon Footprint",
-    metric: "40,598",
-    metricPrev: "45,564",
-    delta: "10.9%",
-    deltaType: "moderateDecrease",
-  },
+  }
 ];
 
 export default function Footprint({ footprint }: { footprint: string }) {
@@ -58,7 +51,7 @@ export default function Footprint({ footprint }: { footprint: string }) {
             <BadgeDelta deltaType={item.deltaType} />
             <Flex justifyContent="start" className="space-x-1 truncate">
               <Text color={colors[item.deltaType]}>{item.delta}</Text>
-              <Text className="truncate">to previous month</Text>
+              <Text className="truncate"></Text>
             </Flex>
           </Flex>
         </Card>
