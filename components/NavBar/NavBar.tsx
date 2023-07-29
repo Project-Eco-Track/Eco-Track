@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
             />
           </IconButton>
 
-          <IconButton open="/">
+          <IconButton open="https://devpost.com/software/ecotrack-dtn732">
             <i
               className="fa-brands fa-dyalog fa-xl"
               style={{ color: "#2e2e2e" }}

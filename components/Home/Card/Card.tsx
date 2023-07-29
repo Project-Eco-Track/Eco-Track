@@ -22,10 +22,12 @@ const Card: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="flex justify-center items-center bg-gray-900 rounded-xl">
-              Video
+              <Link href="https://bit.ly/ecotrack-video">Video</Link>
             </div>
             <div className="flex justify-center items-center bg-gray-900  rounded-xl">
-              Devpost
+              <Link href="https://devpost.com/software/ecotrack-dtn732">
+                Devpost
+              </Link>
             </div>
           </div>
         </div>
