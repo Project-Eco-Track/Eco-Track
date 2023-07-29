@@ -22,7 +22,7 @@ const Card: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="flex justify-center items-center bg-gray-900 rounded-xl">
-              <Link href="https://bit.ly/ecotrack-video">Video</Link>
+              <Link href="https://www.youtube.com/watch?v=2xzF4mINqUw&ab_channel=ArihanVaranasi">Video</Link>
             </div>
             <div className="flex justify-center items-center bg-gray-900  rounded-xl">
               <Link href="https://devpost.com/software/ecotrack-dtn732">
