@@ -77,7 +77,7 @@ const data = [
     title: "Eco-Creative",
     description:
       "Lead 5 Environmental Awareness Events. Given to eco-conscious individuals who have organized and hosted events to raise awareness and educate others about environmental issues.",
-    disable: false,
+    disable: true,
   },
   {
     color: "gold",
@@ -85,15 +85,15 @@ const data = [
     title: "Green Innovator",
     description:
       "Implement Energy-Efficient Technologies in Your Community. Earned by those who have taken the initiative to introduce and promote energy-efficient technologies in their neighborhoods or workplaces.",
-    disable: false,
+    disable: true,
   },
   {
-    color: "silver",
+    color: "teal",
     icon: "fa fa-tree",
     title: "Nature Guardian",
     description:
       "Volunteer 100 Hours in Environmental Conservation. Awarded to individuals who have dedicated significant time and effort to protect and preserve natural habitats through volunteering.",
-    disable: false,
+    disable: true,
   },
   {
     color: "pink",
@@ -101,7 +101,7 @@ const data = [
     title: "Climate Advocate",
     description:
       "Write 10 Letters to Local Representatives about Climate Change. Given to proactive individuals who have engaged in civic action by advocating for climate change policies and action at the local or national level.",
-    disable: false,
+    disable: true,
   },
 ];
 

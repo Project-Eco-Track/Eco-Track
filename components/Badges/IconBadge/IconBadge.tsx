@@ -11,7 +11,7 @@ interface Props {
 
 const IconBadge = ({ color, icon, title, description, disable }: Props) => {
   return (
-    <div className={`badge ${color} ${disable ? "disable" : ""}`}>
+    <div className={`badge ${disable? "silver": color} ${disable ? "disable" : ""}`}>
       <div className="circle">
         {" "}
         <i className={icon}></i>
