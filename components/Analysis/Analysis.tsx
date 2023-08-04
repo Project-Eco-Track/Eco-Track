@@ -1,6 +1,7 @@
 import Footprint from "./Footprint";
 import Pie from "./Pie";
 import Tips from "./Tips";
+import { currentUser } from "@clerk/nextjs";
 
 export interface CarbonFootprintData {
   CarbonFootprint: string;
@@ -13,9 +14,9 @@ export interface CarbonFootprintData {
   WasteManagement: string;
 }
 
-const getData = async (): Promise<CarbonFootprintData> => {
+const getData = async (userid:string): Promise<CarbonFootprintData> => {
   const dataAppEndpoint =
-    "https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=user_id-akshayvs2";
+    "https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=" + userid;
   try {
     const response = await fetch(dataAppEndpoint);
     if (!response.ok) {
@@ -31,9 +32,11 @@ const getData = async (): Promise<CarbonFootprintData> => {
 };
 
 const Analysis = async () => {
+  const user = await currentUser();
+  console.log(user)
   let data = undefined;
   try {
-    data = await getData();
+    data = await getData(JSON.stringify(user.id));
   } catch (error) {
     console.error("Error getting carbon footprint data:", error);
   }
