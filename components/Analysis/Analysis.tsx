@@ -24,6 +24,7 @@ const getData = async (userid:string): Promise<CarbonFootprintData> => {
     }
 
     const data = await response.json();
+    console.log(data)
     return data;
   } catch (error: unknown) {
     console.error("Error fetching carbon footprint data:", error);
@@ -34,6 +35,7 @@ const getData = async (userid:string): Promise<CarbonFootprintData> => {
 const Analysis = async () => {
   const user = await currentUser();
   console.log(user)
+  if(user == null) return <div className=" w-full justify-center flex">An Error Occured</div>;
   let data = undefined;
   try {
     data = await getData(JSON.stringify(user.id));
