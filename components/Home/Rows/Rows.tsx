@@ -14,11 +14,10 @@ const Rows: React.FC = () => {
         <div className="image-container">
           <div style={{ width: "100%" }}>
             <Image
-              className="brightness-[0.7]"
+              className="brightness-[0.7] object-cover object-top"
+              fill
               src={hills.src}
               alt=""
-              width={800}
-              height={600}
             />
           </div>
 
@@ -32,11 +31,10 @@ const Rows: React.FC = () => {
         </div>
         <div className="image-container bg-green-500">
           <Image
-            className="brightness-[0.7]"
+            className="brightness-[0.7] object-cover object-top"
+            fill
             src={leaf.src}
             alt=""
-            width={800}
-            height={600}
           />
 
           <Link href="track/statistics">
@@ -49,11 +47,10 @@ const Rows: React.FC = () => {
         </div>
         <div className="image-container">
           <Image
-            className="brightness-[0.7]"
+            className="brightness-[0.7] object-cover object-top"
+            fill
             src={galaxy.src}
             alt=""
-            width={800}
-            height={600}
           />
 
           <Link href="/badges">
@@ -66,11 +63,10 @@ const Rows: React.FC = () => {
         </div>
         <div className="image-container">
           <Image
-            className="brightness-[0.7]"
+            className="brightness-[0.7] object-cover object-top"
+            fill
             src={trees.src}
             alt=""
-            width={800}
-            height={600}
           />
 
           <Link href="/blogs">
