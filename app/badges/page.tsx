@@ -1,10 +1,12 @@
 import React from "react";
-import BadgePage from "./badges";
+import Badges from "@components/Badges";
+import BgRound from "@components/shared/BgRound";
+
 const page = () => {
   return (
-    <div style={{ backgroundColor: "#2e2e2e" }}>
-      <BadgePage />
-    </div>
+    <BgRound>
+      <Badges />
+    </BgRound>
   );
 };
 

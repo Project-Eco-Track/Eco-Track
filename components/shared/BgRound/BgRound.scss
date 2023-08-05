@@ -1,7 +1,6 @@
 @import "@global-vars.scss";
-@import "@components/shared/styles/underlineAnim.scss";
 
-@mixin card {
+.bg-round {
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -13,8 +12,5 @@
   align-items: center;
   overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
-}
-
-.underline-anim {
-  @include underline-anim;
+  margin-top: 10px;
 }

@@ -1,0 +1,119 @@
+$color_1: #bdbdbd;
+$color_2: #212121;
+$font-family_1: "Raleway", Arial, sans-serif;
+$font-family_2: "Lora", Arial, sans-serif;
+$background-color_1: #bdbdbd;
+$border-color_1: #bdbdbd #bdbdbd #bdbdbd transparent;
+$border-color_2: #bdbdbd transparent #bdbdbd #bdbdbd;
+
+@import "https://fonts.googleapis.com/css?family=Raleway:500";
+@import "https://fonts.googleapis.com/css?family=Lora:700";
+
+.snip-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  justify-content: center;
+  gap: 0px;
+  width: 70%;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center; 
+}
+
+.snip1331 {
+  font-family: $font-family_1;
+  position: relative;
+  display: block;
+  color: $color_1;
+  margin: 60px 5px;
+  max-width: 285px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $font-family_2;
+    font-weight: 700;
+    font-size: 1.8em;
+    line-height: 50px;
+    position: relative;
+    background-color: $background-color_1;
+    color: $color_2;
+    text-align: center;
+    margin: 0 30px 8px;
+    border-top: 6px solid #212121;
+    border-bottom: 6px solid #212121;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 5px;
+      border-width: 25px 10px;
+      border-style: solid;
+      left: -23px;
+      border-color: $border-color_1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 5px;
+      border-width: 25px 10px;
+      border-style: solid;
+      right: -23px;
+      border-color: $border-color_2;
+    }
+  }
+  h5 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.6em;
+  }
+  h6 {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    &:before {
+      position: absolute;
+      height: 1px;
+      content: "";
+      background: #bdbdbd;
+      width: 30px;
+      top: 50%;
+      left: -35px;
+    }
+    &:after {
+      position: absolute;
+      height: 1px;
+      content: "";
+      background: #bdbdbd;
+      width: 30px;
+      top: 50%;
+      right: -35px;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 8px solid #bdbdbd;
+    left: 50%;
+    top: 50%;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+    transform: rotate(45deg) translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
