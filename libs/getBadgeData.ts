@@ -21,7 +21,7 @@ const data = [
     title: "Water Hero",
     description:
       "Cut Water Usage by 30%. Presented to individuals who have successfully conserved water through efficient practices and technologies, helping to preserve this precious resource.",
-    disable: false,
+    disable: true,
   },
   {
     color: "purple",
@@ -45,7 +45,7 @@ const data = [
     title: "Plastic-Free Pro",
     description:
       "Refuse Single-Use Plastics for 6 Months. Awarded to those who have made a commitment to reduce plastic waste by avoiding single-use plastic items in their daily lives.",
-    disable: false,
+    disable: true,
   },
   {
     color: "green",
@@ -61,7 +61,7 @@ const data = [
     title: "Renewable Enthusiast",
     description:
       "Install Solar Panels or Wind Turbine. Awarded to those who have adopted renewable energy systems, generating their electricity from clean and sustainable sources.",
-    disable: false,
+    disable: true,
   },
   {
     color: "green",
@@ -97,16 +97,25 @@ const data = [
   },
   {
     color: "pink",
-    icon: "fa fa-globe",
+    icon: "fa fa-cloud-sun-rain",
     title: "Climate Advocate",
     description:
       "Write 10 Letters to Local Representatives about Climate Change. Given to proactive individuals who have engaged in civic action by advocating for climate change policies and action at the local or national level.",
-    disable: true,
+    disable: false,
   },
 ];
 
 const getBadgeData = () => {
-  return JSON.stringify(data);
+  const result = data.sort((a, b) => {
+    if (a.disable === false && b.disable === true) {
+      return -1; // a comes before b
+    } else if (a.disable === true && b.disable === false) {
+      return 1; // b comes before a
+    } else {
+      return 0; // leave the items in the same order
+    }
+  });
+  return JSON.stringify(result);
 };
 
 export default getBadgeData;

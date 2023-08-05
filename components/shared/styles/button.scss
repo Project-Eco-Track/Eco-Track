@@ -1,0 +1,26 @@
+@import "@global-vars.scss";
+
+@mixin button {
+  width: fit-content;
+  border: solid 2px $primary-white;
+  color: $primary-white;
+  border-radius: 30px;
+  padding: 9px 30px;
+  margin-right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  opacity: 60%;
+  outline: none;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    background-color: $primary-white;
+    color: $primary-black;
+  }
+}

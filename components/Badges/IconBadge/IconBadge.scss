@@ -57,6 +57,9 @@
     z-index: 10;
     border-radius: 50%;
     transition: 680ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include margin-auto;
     i.fa {

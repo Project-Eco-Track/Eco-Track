@@ -1,0 +1,11 @@
+@import "@components/shared/styles/underlineAnim";
+@import "@components/shared/styles/button";
+@import "@global-vars.scss";
+
+.underline-anim{
+    @include underline-anim;
+}
+
+.button {
+    @include button;
+}
