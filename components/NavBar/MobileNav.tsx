@@ -16,7 +16,7 @@ const MobileNav = () => {
         href="/badges"
         className="mx-10 h-20 text-center font-bold text-2xl text-white -translate-y-20"
       >
-        Badge
+        Badges
       </Link>
       <Link
         href="/blogs"

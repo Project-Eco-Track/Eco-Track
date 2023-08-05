@@ -25,14 +25,14 @@ const AwardBadge = () => {
 
   const download = () => {
     const link = document.createElement("a");
-    link.download = "html-to-img.jpg";
+    link.download = "Ecotrack Badge";
     link.href = dataUrl;
     link.click();
   };
 
   return (
     <>
-      <div className="snip-wrapper" ref={domEl}>
+      <div className="snip-wrapper rounded-xl" ref={domEl}>
         <div className="snip1331">
           <h1>Eco-Tracker</h1>
           <h5>Carbon Footprint</h5>

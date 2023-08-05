@@ -11,12 +11,15 @@ interface Props {
 
 const IconBadge = ({ color, icon, title, description, disable }: Props) => {
   return (
-    <div className={`badge ${disable? "silver": color} ${disable ? "disable" : ""}`}>
-      <div className="circle">
+    <div className={`badge ${disable ? "silver disable" : color}`}>
+      <div className="tooltip">{description}</div>
+      <div className={`circle ${disable ? "opacity-25" : "opacity-100"}`}>
         {" "}
         <i className={icon}></i>
       </div>
-      <div className="ribbon">{title}</div>
+      <div className={`ribbon ${disable ? "opacity-25" : "opacity-100"}`}>
+        {title}
+      </div>
     </div>
   );
 };

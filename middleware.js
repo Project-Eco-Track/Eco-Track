@@ -9,6 +9,7 @@ export default authMiddleware({
     "/api/getBlogs",
     "/api/uploadImage",
     "/api/carbonFootprint",
+    "/api/getBadge"
   ],
 });
 export const config = {
