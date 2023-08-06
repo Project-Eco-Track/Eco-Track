@@ -1,7 +1,7 @@
 import Footprint from "./Footprint";
 import Pie from "./Pie";
 import Tips from "./Tips";
-
+import getUser from "@libs/getUser";
 export interface CarbonFootprintData {
   CarbonFootprint: string;
   Date: string;
@@ -14,8 +14,10 @@ export interface CarbonFootprintData {
 }
 
 const getData = async (): Promise<CarbonFootprintData> => {
+  const user = await getUser();
+  const id = user?.id;
   const dataAppEndpoint =
-    "https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=user_id-akshayvs2";
+    "https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=" + id;
   try {
     const response = await fetch(dataAppEndpoint);
     if (!response.ok) {
