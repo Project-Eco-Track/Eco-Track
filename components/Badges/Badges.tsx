@@ -9,7 +9,8 @@ import "./IconBadge/IconBadge.scss";
 const Badges = async () => {
   const res = JSON.parse(await getBadgeData());
   const badgeData = res.badges;
-  const carbonFootprint = res.CarbonFootprint;
+  const carbonFootprint = res.carbonFootprint;
+  
   return (
     <BgRound>
       <h1 className="text-5xl font-[600] underline-anim mt-10 mb-5">
