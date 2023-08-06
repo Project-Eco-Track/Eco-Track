@@ -105,12 +105,12 @@ export default function Pie({ data }: { data: CarbonFootprintData }) {
     <Card className="max-w-4xl m-0">
       <div className="hidden sm:block">
         <Flex className="space-x-4" justifyContent="start" alignItems="center">
-          <Title className="truncate">Chemical Output</Title>
+          <Title className="truncate">Carbon Output</Title>
         </Flex>
       </div>
       {/* --- Same code snippet as above but with no flex to optmize mobile view --- */}
       <div className="sm:hidden">
-        <Title className="truncate">Chemical Output</Title>
+        <Title className="truncate">Carbon Output</Title>
       </div>
       <Grid numItemsLg={3} className="mt-8 gap-y-10 gap-x-14">
         <Flex>
@@ -126,7 +126,7 @@ export default function Pie({ data }: { data: CarbonFootprintData }) {
         <Col numColSpan={1} numColSpanLg={2}>
           <Flex>
             <Text className="truncate">
-              <Bold>Chemical</Bold>
+              <Bold>Weights</Bold>
             </Text>
             <Text>
               <Bold>+/-% from average </Bold>
