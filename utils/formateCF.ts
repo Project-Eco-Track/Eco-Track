@@ -20,14 +20,14 @@ export async function formateCF(data: any) {
     fruitsAndVegetablesConsumption: data.fruitsAndVegetablesConsumption,
     foodWasteFrequency: data.foodWasteFrequency,
   };
-  const wasteManagementWeightage = {
+  const purchasingHabitWeightage = {
     minimalPackagingBulkProducts: data.minimalPackagingBulkProducts,
     secondHandItemsPurchase: data.secondHandItemsPurchase,
     consideringEnvironmentalImpact: data.consideringEnvironmentalImpact,
     ecoFriendlyBrandsPreference: data.ecoFriendlyBrandsPreference,
     singleUsePlasticsAvoidance: data.singleUsePlasticsAvoidance,
   };
-  const purchasingHabitWeightage = {
+  const wasteManagementWeightage = {
     recyclingHabits: data.recyclingHabits,
     organicWasteComposting: data.organicWasteComposting,
     reusableContainersAndBags: data.reusableContainersAndBags,
