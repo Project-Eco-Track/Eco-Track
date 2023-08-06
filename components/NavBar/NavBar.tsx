@@ -33,7 +33,7 @@ const NavBar: React.FC = () => {
           <div className="nav-links">
             <Button open="/about">Our&nbsp;Team</Button>
             <Button open="/track">Track</Button>
-            <Button open="/badges">Get&nbsp;Badge</Button>
+            <Button open="/badges">Badges</Button>
             <Button open="/blogs">Blog</Button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+@import "@global-vars.scss";
 @mixin margin-auto {
   top: 0;
   left: 0;
@@ -13,7 +14,11 @@
   text-align: center;
 }
 .disable {
-  opacity: 20%;
+  opacity: 0.25;
+  transition: 0;
+  &:hover {
+    opacity: 1;
+  }
 }
 .badge {
   position: relative;
@@ -47,6 +52,12 @@
   &:hover {
     .circle {
       transform: rotateY(360deg);
+    }
+  }
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
     }
   }
   .circle {
@@ -89,6 +100,23 @@
     border-radius: 30px;
     background: linear-gradient(to bottom right, #55555557 0%, #3333332c 100%);
     cursor: default;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: $primary-black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 99;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 }
 

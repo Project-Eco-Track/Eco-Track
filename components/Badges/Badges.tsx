@@ -6,14 +6,16 @@ import getBadgeData from "@libs/getBadgeData";
 import "./Badges.scss";
 
 import "./IconBadge/IconBadge.scss";
-const Badges = () => {
-  const badgeData = JSON.parse(getBadgeData());
+const Badges = async () => {
+  const res = JSON.parse(await getBadgeData());
+  const badgeData = res.badges;
+  const carbonFootprint = res.CarbonFootprint;
   return (
     <BgRound>
-        <h1 className="text-5xl font-[600] underline-anim mt-10 mb-5">
-          <span>Award Badges</span>
-        </h1>
-        <AwardBadge />
+      <h1 className="text-5xl font-[600] underline-anim mt-10 mb-5">
+        <span>Award Badges</span>
+      </h1>
+      <AwardBadge carboonFootprint={carbonFootprint} />
       <h1 className="text-5xl font-[600] underline-anim mt-24">
         <span>Eco Badges</span>
       </h1>
@@ -25,7 +27,7 @@ const Badges = () => {
             icon={badge.icon}
             title={badge.title}
             description={badge.description}
-            disable={badge.disable}
+            disable={badge.disable === false ? badge.disable : true}
           />
         ))}
       </div>
