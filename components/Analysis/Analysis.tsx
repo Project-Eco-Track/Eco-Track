@@ -2,6 +2,7 @@ import Footprint from "./Footprint";
 import Pie from "./Pie";
 import Tips from "./Tips";
 import getUser from "@libs/getUser";
+import { redirect } from 'next/navigation'
 export interface CarbonFootprintData {
   CarbonFootprint: string;
   Date: string;
@@ -21,7 +22,7 @@ const getData = async (): Promise<CarbonFootprintData> => {
   try {
     const response = await fetch(dataAppEndpoint);
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      window.location.href = "/track";
     }
 
     const data = await response.json();
@@ -41,7 +42,8 @@ const Analysis = async () => {
   }
 
   if (data === undefined) {
-    return <div className=" w-full justify-center flex">An Error Occured</div>;
+    redirect("/track");
+    return <div className=" w-full justify-center flex text-white">Take survey First</div>;
   }
 
   return (
