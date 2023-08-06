@@ -35,7 +35,7 @@ const getBadgeData = async () => {
 
   return JSON.stringify({
     badges: result,
-    carbonFootprint: "0",
+    carbonFootprint: carbonFootprint,
   });
 };
 
