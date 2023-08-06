@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as htmlToImage from "html-to-image";
 import "./AwardBadge.scss";
 
-const AwardBadge = () => {
+const AwardBadge = ({ carboonFootprint }: { carboonFootprint: string }) => {
   const domEl = useRef(null);
   const [dataUrl, setDataUrl] = useState("");
 
@@ -36,12 +36,12 @@ const AwardBadge = () => {
         <div className="snip1331">
           <h1>Eco-Tracker</h1>
           <h5>Carbon Footprint</h5>
-          <h6>3.4 tons</h6>
+          <h6>{carboonFootprint} tons</h6>
         </div>
         <div className="snip1331">
           <h1>Eco-Blogger</h1>
           <h5>I write Eco blogs</h5>
-          <h6>3 Blogs</h6>
+          <h6>{0} Blogs</h6>
         </div>
         <div className="snip1331">
           <h1>Sustain</h1>

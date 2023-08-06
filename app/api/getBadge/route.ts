@@ -1,20 +1,13 @@
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
+  const queryParams = new URL(request.url).searchParams;
+  const userid = queryParams.get("id");
   const carbonRes = await fetch(
-    `https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=user_2T6diquEeYBtUz063H0kEDdxdIE`
+    `https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=${userid}`
   );
-  const carbonData = {
-    CarbonFootprint: 12.12,
-    Date: "23-07-28",
-    Diet: 2.52,
-    EnergyUsage: 6.11,
-    PurchasingHabit: 0,
-    Transportation: 3.49,
-    UserID: "user_2T6diquEeYBtUz063H0kEDdxdIE",
-    WasteManagement: 0,
-  };
-  const data = [
+  const carbonData = await carbonRes.json();
+  const badges = [
     {
       color: "green",
       icon: "fa fa-tree",
@@ -110,5 +103,7 @@ export async function GET(request: Request) {
     },
   ];
 
-  return NextResponse.json(data);
+  const response = { badges: badges, carbonFootprint: carbonData?.CarbonFootprint };
+
+  return NextResponse.json(response);
 }
