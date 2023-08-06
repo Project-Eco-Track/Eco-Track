@@ -7,6 +7,8 @@ export async function GET(request: Request) {
     `https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=${userid}`
   );
   const carbonData = await carbonRes.json();
+
+
   const badges = [
     {
       color: "green",
@@ -20,7 +22,12 @@ export async function GET(request: Request) {
       icon: "fa fa-lightbulb",
       title: "Energy Saver",
       description: "Reduce Energy Consumption below 5 points",
-      disable: carbonData?.EnergyUsage < 5,
+      disable:
+        !carbonData?.EnergyUsage ||
+        carbonData.EnergyUsage === "" ||
+        carbonData.EnergyUsage < 5
+          ? true
+          : false,
     },
     {
       color: "blue",
@@ -34,28 +41,46 @@ export async function GET(request: Request) {
       icon: "fa fa-recycle",
       title: "Waste Warrior",
       description: "Reduce Waste Production below 5 points",
-      disable: carbonData?.PurchasingHabit < 5,
+      disable:
+        !carbonData?.PurchasingHabit ||
+        carbonData.PurchasingHabit === "" ||
+        carbonData.PurchasingHabit < 5
+          ? true
+          : false,
     },
     {
       color: "orange",
       icon: "fa fa-bicycle",
       title: "Sustainable Commuter",
       description: "Reduce Transportation Emissions below 5 points",
-      disable: carbonData?.Transportation < 5,
+      disable:
+        !carbonData?.Transportation ||
+        carbonData.Transportation === "" ||
+        carbonData.Transportation < 5
+          ? true
+          : false,
     },
     {
       color: "red",
       icon: "fa fa-shopping-bag",
       title: "Plastic-Free Pro",
       description: "Reduce Plastic Consumption below 5 points",
-      disable: carbonData?.PurchasingHabit < 4,
+      disable:
+        !carbonData?.PurchasingHabit ||
+        carbonData.PurchasingHabit === "" ||
+        carbonData.PurchasingHabit < 4
+          ? true
+          : false,
     },
     {
       color: "green",
       icon: "fa fa-leaf",
       title: "Green Cuisine",
       description: "Maintain Eco-Friendly Diet, below 5 points",
-      disable: carbonData?.Diet < 5,
+      disable:
+        !carbonData?.Diet || carbonData.Diet === "" || carbonData.Diet < 5
+          ? true
+          : false,
     },
     {
       color: "blue-dark",
@@ -63,7 +88,12 @@ export async function GET(request: Request) {
       title: "Renewable Enthusiast",
       description:
         "Use Renewable Energy Sources Over Non Renewable Energy Sources",
-      disable: carbonData?.EnergyUsage < 3,
+      disable:
+        !carbonData?.EnergyUsage ||
+        carbonData.EnergyUsage === "" ||
+        carbonData.EnergyUsage < 3
+          ? true
+          : false,
     },
     {
       color: "green",
@@ -71,7 +101,12 @@ export async function GET(request: Request) {
       title: "Carbon Cutter",
       description:
         "Offset 50% of Your Annual Carbon Footprint. Presented to individuals who have taken measures to reduce their carbon emissions and offset the remaining portion through verified carbon offset programs.",
-      disable: carbonData?.CarbonFootprint < 20,
+      disable:
+        !carbonData?.CarbonFootprint ||
+        carbonData.CarbonFootprint === "" ||
+        carbonData.CarbonFootprint < 20
+          ? true
+          : false,
     },
     {
       color: "green-dark",
@@ -103,7 +138,10 @@ export async function GET(request: Request) {
     },
   ];
 
-  const response = { badges: badges, carbonFootprint: carbonData?.CarbonFootprint };
+  const response = {
+    badges: badges,
+    carbonFootprint: carbonData?.CarbonFootprint,
+  };
 
   return NextResponse.json(response);
 }

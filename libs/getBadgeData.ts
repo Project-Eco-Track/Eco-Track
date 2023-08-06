@@ -14,14 +14,28 @@ const getBadgeData = async () => {
       return 0;
     }
   });
-  const carbonRes = await fetch(
-    `https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=${userid}`
-  );
-  const carbonData = await carbonRes.json();
-  const carbonFootprint = carbonData.CarbonFootprint;
+
+  //fetch carbonFootprint data
+  let carbonData;
+  try {
+    const carbonRes = await fetch(
+      `https://sangria-swordfish-wrap.cyclic.app/carbonfootprint?id=${userid}`
+    );
+    if (carbonRes.ok) carbonData = await carbonRes.json();
+    else
+      console.error(
+        "Error: Unable to fetch carbon data. Server returned a non-ok response."
+      );
+  } catch (error) {
+    console.error("Error: Unable to fetch or parse carbon data.", error);
+  }
+
+  const carbonFootprint = carbonData?.CarbonFootprint ?? 0;
+  console.log(result);
+
   return JSON.stringify({
     badges: result,
-    carbonFootprint: carbonFootprint,
+    carbonFootprint: "0",
   });
 };
 
