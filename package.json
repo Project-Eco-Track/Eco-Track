@@ -11,7 +11,7 @@
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
     "@clerk/clerk-js": "^4.50.0",
-    "@clerk/nextjs": "^4.21.8",
+    "@clerk/nextjs": "^4.29.3",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
